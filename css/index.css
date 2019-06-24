@@ -1,0 +1,25 @@
+
+main > section {
+  height: 500px;
+  margin: 20px auto;
+  width: 1024px;
+}
+
+main > section:first-child {
+  border-radius: 10px;
+  border: 20px solid white;
+  background-color: rgb(226,245,250);
+  padding: 10px;
+}
+
+main > section:last-child {
+  background-color: lightgoldenrodyellow;
+}
+
+#ingredients{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 5px;
+}
+

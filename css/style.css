@@ -1,3 +1,7 @@
+html {
+  background-color: black;
+}
+
 header {
   background-color: lightgoldenrodyellow;
   margin: auto;
@@ -33,22 +37,13 @@ nav {
   float: right;
 }
 
-li{
+nav li{
   display: inline-block;
   font-size: 30px;
   margin: 30px 50px 30px 0px;
   padding: 30px 0px;
 }
 
-main > section {
-  border: 1px solid black;
-  height: 500px;
-  margin: 20px auto;
-  width: 1024px;
-}
-#ingredients{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
-  grid-gap: 5px;
+footer {
+  color: white;
 }
