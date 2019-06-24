@@ -1,0 +1,23 @@
+header {
+  background-color: lightgoldenrodyellow;
+  margin: auto;
+  width: 1280px;
+}
+
+header > div {
+  display: inline-block;
+  font-size: 0px;
+  width: 300px;
+}
+
+header > div > div {
+  width: 150px;
+}
+
+header > div > div > h1 {
+  font-size: 100px;
+}
+
+header > div > div > h4 {
+  font-size: 50px;
+}

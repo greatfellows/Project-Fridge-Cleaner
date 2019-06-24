@@ -1,6 +1,7 @@
 Read me
 Great Fellows - What can I make? 
 
+
 Created by Eric Huang, Benjamin Clard, Hanna Alemu, & Elle Young
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
@@ -25,4 +26,8 @@ all ingredients are put in a recipe book, then set to arrays.
 
 
 put selected ingredients into an array, which we will iterate over to find ingredients in recipe book.
+
+=======
+
+Benjamin
 
