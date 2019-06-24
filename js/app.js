@@ -25,34 +25,69 @@ var allIngredients = [];
 
 // get all unique ingredients from all recipes and put them in allIngredients array
 function buildIngredientsArray() {
-  for (var i = 0; i < recipeBook.length; i++) {
-    for (var j = 0; j < recipeBook[i].ingredients.length; j++) {
-      if (!allIngredients.includes(recipeBook[i].ingredients[j])) {
-        allIngredients.push(recipeBook[i].ingredients[j]);
-      }
-    }
-  }
+	for (var i = 0; i < recipeBook.length; i++) {
+		for (var j = 0; j < recipeBook[i].ingredients.length; j++) {
+			if (!allIngredients.includes(recipeBook[i].ingredients[j])) {
+				allIngredients.push(recipeBook[i].ingredients[j]);
+			}
+		}
+	}
 }
 
 // render ingredients table
 function renderIngredientsTable() {
-  for (var i = 0; i < allIngredients.length; i++) {
-    var buttonElement = document.createElement('input');
-    buttonElement.type = 'button';
-    buttonElement.value = allIngredients[i];
-    buttonElement.click('onClickSelect()');
-    var ingredientsDiv = document.getElementById('ingredients');
-    ingredientsDiv.appendChild(buttonElement);
-  }
+	for (var i = 0; i < allIngredients.length; i++) {
+		var buttonElement = document.createElement('input');
+		buttonElement.type = 'button';
+		buttonElement.value = allIngredients[i];
+		buttonElement.click('onIngredientSelect()');
+		var ingredientsDiv = document.getElementById('ingredients');
+		ingredientsDiv.appendChild(buttonElement);
+	}
 }
 
-function onClickSelect() {
-  console.log('button pushed');
+// handle a ingredient button being selected
+function onIngredientSelect() {
+	console.log('button pushed');
 }
+
+// render recipes
+function renderRecipes() {
+	var recipeContainer = document.getElementById('recipes');
+	for (var i = 0; i < recipeBook.length; i++) {
+		//create recipes element
+		var recipeDiv = document.createElement('div');
+		var imageDiv = document.createElement('div');
+		var imageElement = document.createElement('img');
+		var h3Element = document.createElement('h3');
+		var ulElement = document.createElement('ul');
+		// create li elements for each ingredient in the recipe
+		for (var j = 0; j < recipeBook[i].ingredients.length; j++) {
+			var liElement = document.createElement('li');
+			liElement.textContent = recipeBook[i].ingredients[j];
+			ulElement.appendChild(liElement);
+		}
+		// add element content
+		h3Element.textContent = recipeBook[i].name;
+		imageElement.src = 'https://via.placeholder.com/150';
+		//append elements
+		imageDiv.appendChild(imageElement);
+		recipeDiv.appendChild(imageDiv);
+		recipeDiv.appendChild(h3Element);
+		recipeDiv.appendChild(ulElement);
+		recipeContainer.appendChild(recipeDiv);
+
+	}
+
+}
+
+
 
 
 // ------------ CALLS ------------
 buildIngredientsArray();
 renderIngredientsTable();
+renderRecipes();
+
 
 
