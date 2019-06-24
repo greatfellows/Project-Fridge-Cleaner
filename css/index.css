@@ -30,17 +30,22 @@ main > section:first-child > h2 {
 }
 
 #ingredients > input {
+  border: 0px;
+  font-size: 15px;
   place-self: center;
-  font-size: 40px;
   width: 200px;
 }
 
 .buttonOn {
-  background-color: red;
+  background-color: lightskyblue;
+  color: white;
+  font-size: 15px;
 }
 
 .buttonOff {
-  background-color: pink;
+  background-color: white;
+  color: blue;
+  font-size: 15px;
 }
 
 main > section:last-child {
@@ -82,7 +87,9 @@ main > section:last-child > h2 {
 }
 
 #recipes h3 {
-  font-size: 20px;
+  font-size: 30px;
+  height: 30px;
+  padding: 10px 0px;
 }
 
 #recipes li {
