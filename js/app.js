@@ -13,3 +13,16 @@ var recipe09 = { name: 'Hot Water Chocolate Cake', ingredientsOnHand: 0, image: 
 var recipe10 = { name: 'Hungry Bear Cheese Cake', ingredientsOnHand: 0, image: 'http://something.com', ingredients: ['wheat germ, optional', 'graham cracker crumbs', 'sugar', 'cinnamon', 'melted butter', 'sour cream', 'sugar', 'vanilla', 'salt', 'cream cheese', 'cottage cheese', 'eggs', 'lemon juice', 'vanilla', 'sugar', 'flour', 'flour', 'salt'] };
 
 
+var allIngredients = [];
+function buildIngredientsArray() {
+  for (var i = 0; i < recipeBook.length; i++) {
+    for (var j = 0; j < recipeBook[i].ingredients.length; j++) {
+      if (!allIngredients.includes(recipeBook[i].ingredients[j])) {
+        allIngredients.push(recipeBook[i].ingredients[j]);
+      }
+    }
+  }
+}
+
+buildIngredientsArray();
+console.log(allIngredients);
