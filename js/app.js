@@ -73,10 +73,15 @@ function renderRecipes() {
     for (var j = 0; j < recipeBook[i].ingredients.length; j++) {
       var liElement = document.createElement('li');
       liElement.textContent = recipeBook[i].ingredients[j];
+      // TODO: trying to get a class on recipe ingredients ot hightlight them
+      // if (selectedIngredients.includes(recipeBook[i].ingredients[j])) {
+      //   console.log(`SelectedIngredients array includes ${recipeBook[i].ingredients[j]}`);
+      //   liElement.className = 'unselectedIgredient';
+      // }
       ulElement.appendChild(liElement);
     }
     // add element content
-    h3Element.textContent = recipeBook[i].name;
+    h3Element.textContent = `${recipeBook[i].name} (${recipeBook[i].ingredientsOnHand} Ingredients on Hand)`;
     imageElement.src = 'https://via.placeholder.com/150';
     //append elements
     imageDiv.appendChild(imageElement);
