@@ -1,0 +1,99 @@
+
+main > section {
+  margin: 20px auto;
+  width: 1024px;
+}
+
+main > section:first-child {
+  border-radius: 10px;
+  border: 20px solid white;
+  background-color: rgb(226,245,250);
+  height: 400px;
+  padding: 10px;
+}
+
+main > section:first-child > h2 {
+  background-color: rgb(226,245,250);
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#ingredients {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: auto;
+  grid-gap: 5px;
+  margin: auto;
+  width: 960px;
+  justify-content: space-evenly;
+}
+
+#ingredients > input {
+  border: 0px;
+  font-size: 15px;
+  place-self: center;
+  width: 200px;
+}
+
+.buttonOn {
+  background-color: lightskyblue;
+  color: white;
+  font-size: 15px;
+}
+
+.buttonOff {
+  background-color: white;
+  color: blue;
+  font-size: 15px;
+}
+
+main > section:last-child {
+  background-color: lightgoldenrodyellow;
+  height: 530px;
+  overflow: auto;
+  padding-bottom: 10px;
+}
+
+main > section:last-child > h2 {
+  background: lightgoldenrodyellow;
+  position: sticky;
+  top: 0;
+  font-size: 40px;
+  padding: 10px;
+  text-align: center;
+}
+
+#recipes {
+  margin: auto;
+  padding: 0px 10px;
+  width: 980px;
+  overflow: auto;
+}
+
+#recipes > div {
+  background-color: white;
+  height: 150px;
+  margin-bottom: 10px;
+  font-size: 0px;
+}
+
+#recipes > div > div {
+  float: left;
+  height: 150px;
+  object-fit: contain;
+  margin-right: 10px;
+  width: 150px;
+}
+
+#recipes h3 {
+  font-size: 30px;
+  height: 30px;
+  padding: 10px 0px;
+}
+
+#recipes li {
+  font-size: 15px;
+  display: inline-block;
+  padding: 2px;
+}
