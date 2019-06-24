@@ -1,4 +1,3 @@
-
 'use strict';
 
 // ------------ VARIABLES (DATA) ------------
@@ -53,7 +52,16 @@ function renderIngredientsTable() {
 
 // render recipes
 function renderRecipes() {
+
+  // sort recipeBook by # of ingredients on hand
+  recipeBook.sort(function (a, b) {
+    return b.ingredientsOnHand - a.ingredientsOnHand;
+  });
+  // get recipe container DIV
   var recipeContainer = document.getElementById('recipes');
+  // clear recipe container DIV
+  recipeContainer.innerHTML = '';
+
   for (var i = 0; i < recipeBook.length; i++) {
     //create recipes element
     var recipeDiv = document.createElement('div');
@@ -101,18 +109,13 @@ function changeIngredientsOnHand(ingredient, positive1Negative1) {
     for (var j = 0; j < recipeBook[i].ingredients.length; j++) {
       if (recipeBook[i].ingredients[j] === ingredient) {
         recipeBook[i].ingredientsOnHand += positive1Negative1;
-        // console.log(recipeBook[i].name + ' - contains: ' + ingredient + ' onHand: ' + recipeBook[i].ingredientsOnHand);
+        console.log(recipeBook[i].name + ' - contains: ' + ingredient + ' onHand: ' + recipeBook[i].ingredientsOnHand);
       }
     }
   }
 }
 
 
-// add event listener
-function assignEventListner() {
-  var ingredientsDiv = document.getElementById('ingredients');
-  ingredientsDiv.addEventListener('click', onIngredientSelect);
-}
 
 
 
@@ -120,6 +123,6 @@ function assignEventListner() {
 buildIngredientArrays();
 renderIngredientsTable();
 renderRecipes();
-// assignEventListner();
+
 
 
