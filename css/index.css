@@ -94,7 +94,13 @@ main > section:last-child > h2 {
 #recipes > div > div:nth-child(2) > div {
   object-fit: contain;
   float: right;
-  height:50px;
+  height: 40px;
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+#recipes > div > div:nth-child(2) > div > img {
+  width: 40px;
 }
 
 #recipes h3 {
@@ -116,42 +122,16 @@ main > section:last-child > h2 {
   font-size: 18px;
   display: inline-block;
   padding: 2px;
-<<<<<<< HEAD
-}
-
-
-.heartButton{
-  margin-left:auto;
-  margin-right: auto;
-  display: block;
-
-  transition: background-color,height,width 0.5s ease;
-
-  background-color: white;
-  height: 100px;
-  width: 100px;
-  border-radius: 49px;
-
-}
-
-.heartButton.on{
-  background-color: red;
-  height: 120px;
-  width: 120px;
-  border-radius: 59px;
-=======
-<<<<<<< HEAD
-  font-style: italic;
 }
 
 .selectedIngredient {
   background-color: #00ccff;
   color: black;
   font-weight: bold;
-=======
 }
 
 .login{
+  display: none; 
   position: sticky;
   float: left;
   padding: 20px;
@@ -159,6 +139,4 @@ main > section:last-child > h2 {
   /* display: inline; */
   /* visibility: hidden; */
 
->>>>>>> a55814d8cef06f03cdce0810a9bf7b03db8057df
->>>>>>> 8fa65f46d6cffd8e88f82224edaca1fec7a60cba
 }
