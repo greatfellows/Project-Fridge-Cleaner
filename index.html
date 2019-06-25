@@ -6,11 +6,21 @@
     <link rel="stylesheet" href="./css/reset.css"/>
     <link rel="stylesheet" href="./css/style.css"/>
     <link rel="stylesheet" href="./css/index.css"/>
+    
   </head>
-
+   <div id='formInvis'> 
+      <form id="form_id" method="post" name="username">
+      <label>User Name :</label>
+      <input type="text" name="username" id="username"/>
+      <label>Password :</label>
+      <input type="password" name="password" id="password"/>
+      <input type="button" value="Login" id="submit" onclick=""/>
+      </form>
+  </div>
   <body>
-
-    <input type="button" value="Login" onclick="submit"/>
+    
+    
+    <input type="button" value="Sign in Here" id= 'loginbutton' onclick="loginbutton"/>
     <header>
       <div>
         <img src="https://via.placeholder.com/150x150"/>
@@ -26,17 +36,9 @@
           <li><a href="about.html">About</a></li>
         </ul>
       </nav>
-      <div class='login'> Log in 
-          <form id="form_id" method="post" name="username">
-          <label>User Name :</label>
-          <input type="text" name="username" id="username"/>
-          <label>Password :</label>
-          <input type="password" name="password" id="password"/>
-          <input type="button" value="Login" id="submit" onclick=""/>
-          </form>
-      </div>
+     
     </header>
-
+   
     <main>
 
       <section>
