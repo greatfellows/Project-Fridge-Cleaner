@@ -209,11 +209,17 @@ function buildIngredientArrays() {
 
 // render ingredients table
 function renderIngredientsTable() {
+  // go through allIngredients
   for (var i = 0; i < allIngredients.length; i++) {
     var buttonElement = document.createElement('input');
     buttonElement.type = 'button';
     buttonElement.value = allIngredients[i];
-    buttonElement.className = 'buttonOff';
+    // TODO if current ingredient is in selected ingredients list set class to buttonON
+    if (selectedIngredients[allIngredients[i]] === 1) {
+      buttonElement.className = 'buttonOn';
+    } else {
+      buttonElement.className = 'buttonOff';
+    }
     buttonElement.addEventListener('click', onIngredientSelect);
     var ingredientsDiv = document.getElementById('ingredients');
     ingredientsDiv.appendChild(buttonElement);
