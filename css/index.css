@@ -136,11 +136,25 @@ body > h4{
   margin: 10px;
   padding: 10px;
 }
-.login{
-  /* display: none;  */
-  padding: 20px;
-  margin: 10px;
-  width: auto;
-  /* display: inline; */
-  /* visibility: hidden; */
+#formInvis{
+  display: none;
+  position: absolute;
 }
+
+#formVis{
+  /* DO NOT CHANGE THE SIZES HERE */
+  background-color: gray;
+  padding: 20px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: 10px auto;
+  width: 550px;
+  height: 80PX;
+  z-index: 1;
+  
+}
+
+#formInvis{
+  display: none;
+}  
