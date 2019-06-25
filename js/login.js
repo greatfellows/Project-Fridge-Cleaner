@@ -1,11 +1,12 @@
 'use strict';
-var userData = localStorage.setItem('#login', userdata);
 
-var data = localStorage.getItem('#login');
+if(userList.userName.password === password) {
+  handleLogin( username, password);
+}
+else {
+  alert('invalid user');
+}
 
-localStorage.removeItem('username');
+document.getElementById('submit').addEventListener('click', handleLogin);
 
-userData.
-
-handleLogin();
 //expected string arguments username and password
