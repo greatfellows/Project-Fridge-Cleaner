@@ -1,7 +1,7 @@
 'use strict';
 
-var loginButton = document.getElementById('submit');
-loginButton.addEventListener('click', submitLogin);
+var submitButton = document.getElementById('submit');
+submitButton.addEventListener('click', submitLogin);
 function submitLogin(){
 
   var username = document.getElementById('username').value;
@@ -13,3 +13,11 @@ function submitLogin(){
 
   handleLogin(username, password);
 }
+
+var loginButton = document.getElementById('login');
+loginButton.addEventListener('click', loginNow);
+function loginNow(){
+  
+}
+
+
