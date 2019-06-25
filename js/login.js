@@ -1,11 +1,15 @@
 'use strict';
-var userData = localStorage.setItem('#login', userdata);
 
-var data = localStorage.getItem('#login');
+var loginButton = document.getElementById('submit');
+loginButton.addEventListener('click', submitLogin);
+function submitLogin(){
 
-localStorage.removeItem('username');
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
 
-userData.
 
-handleLogin();
-//expected string arguments username and password
+  console.log(username);
+  console.log(password);
+
+  handleLogin(username, password);
+}
