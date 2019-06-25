@@ -111,12 +111,43 @@ var recipeBook = [{ name: 'Banana Cake', ingredientsOnHand: 0, image: 'http://so
 
 // all unique ingredients list
 var allIngredients = [];
-//all currently user selected ingredients
 
+// all currently user selected ingredients
 var selectedIngredients = {};
 
+// all users 
+var userList = {};
 
+var favoriteRecipes = [];
+
+
+// ------------ FUNCTIONS (User related) ------------
+
+function User(userName, password, userIngredients, userRecipes) {
+  this.userName = userName;
+  this.password = password;
+  this.userIngredients = userIngredients;
+  this.userRecipes = userRecipes;
+  userList[userName] = this;
+}
+
+
+
+function handleLogin(userName, password) {
+  // check if user already exists
+  if (userList[userName]) {
+    // if so login
+    console.log(userName + ' exists!!!!');
+
+  } else {
+    // if not create
+    new User(userName, password, selectedIngredients, favoriteRecipes);
+    console.log(userName + ' Created!!!!');
+
+  }
+}
 // ------------ FUNCTIONS ------------
+
 
 // get all unique ingredients from all recipes and put them in allIngredients array
 function buildIngredientArrays() {
@@ -185,9 +216,6 @@ function renderRecipes() {
     favoriteImg.src = 'https://via.placeholder.com/40';
     favoriteDiv.addEventListener('click', favoriteButtonSelected);
 
-
-
-
     //append elements
     imageDiv.appendChild(imageElement);
     favoriteDiv.appendChild(favoriteImg);
@@ -242,6 +270,7 @@ function favoriteButtonSelected(event) {
 buildIngredientArrays();
 renderIngredientsTable();
 renderRecipes();
+handleLogin('TEMP USER', 'ADMIN PASSWORD');
 
 
 
