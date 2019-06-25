@@ -182,7 +182,8 @@ function renderRecipes() {
     // add element content
     h3Element.textContent = `${recipeBook[i].name} (${recipeBook[i].ingredientsOnHand} Ingredients on Hand)`;
     imageElement.src = 'https://via.placeholder.com/150';
-    favoriteImg.src = 'https://via.placeholder.com/40';
+    favoriteImg.src = 'imgs/heart-before.png';
+    favoriteImg.className = 'unliked';
     favoriteDiv.addEventListener('click', favoriteButtonSelected);
 
 
@@ -233,6 +234,14 @@ function changeIngredientsOnHand(ingredient, positive1Negative1) {
 
 function favoriteButtonSelected(event) {
   console.log('FAVORITE BUTTON SELECTED' + event);
+  if (event.target.className === 'unliked') {
+    event.target.className = 'liked';
+    event.target.src = 'imgs/heart-after.png';
+    
+  } else {
+    event.target.className = 'unliked';
+    event.target.src = 'imgs/heart-before.png';
+  }
 }
 
 
