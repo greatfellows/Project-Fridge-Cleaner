@@ -112,15 +112,16 @@ var recipeBook = [{ name: 'Banana Cake', ingredientsOnHand: 0, image: 'http://so
 // all unique ingredients list
 var allIngredients = [];
 
-// all currently user selected ingredients
-var selectedIngredients = {};
-
 // all users data object to push to Local storage
 var allUsersData = {};
-var localStorageKey = 'localStorageKey';
+var allUsersKey = 'allUsersKey';
+var userNameKey = 'userNameKey';
 
 // list of current favorite recipes
 var favoriteRecipes = [];
+
+// all currently user selected ingredients
+var selectedIngredients = {};
 
 // current user UserName
 var currentUserName;
@@ -143,27 +144,53 @@ function handleLogin(userName, password) {
   if (allUsersData[userName]) {
     // if so login
     console.log(userName + ' exists!!!!');
-
+    currentUserName = userName;
+    loadCurrentUsersData();
   } else {
     // if not create
     new User(userName, password, selectedIngredients, favoriteRecipes);
     console.log(userName + ' Created!!!!');
+    currentUserName = userName;
   }
+  saveToLocalStorage();
+}
 
-  currentUserName = userName;
+function handleLogout() {
+  // TODO: unload current user data
+  currentUserName = null;
 }
 
 function retrieveLocalStorage() {
   console.log('retrieveLocalStorage');
-  var dataRetrieved = JSON.parse(localStorageKey);
-  allUsersData = dataRetrieved;
+
+  var dataRetrieved = localStorage.getItem(allUsersKey);
+  //  if data exists
+  if (dataRetrieved) {
+    var dataParsed = JSON.parse(dataRetrieved);
+    allUsersData = dataParsed;
+  }
+
+  var storedUserName = localStorage.getItem(userNameKey);
+  //  if data exists
+  if (storedUserName) {
+    currentUserName = storedUserName;
+  }
 }
 
 function saveToLocalStorage() {
   console.log('saveToLocalStorage');
 
-  var dataToStore = JSON.stringify(allUsersData);
-  localStorage.setItem(localStorageKey, dataToStore);
+  // update allUserData current user information
+  if (currentUserName) {
+    allUsersData[currentUserName].userIngredients = selectedIngredients;
+    allUsersData[currentUserName].userRecipes = favoriteRecipes;
+
+    // stingify and save all user data to storage
+    var dataToStore = JSON.stringify(allUsersData);
+    localStorage.setItem(allUsersKey, dataToStore);
+    // save current username to storage
+    localStorage.setItem(userNameKey, currentUserName);
+  }
 }
 
 // ------------ FUNCTIONS ------------
@@ -234,7 +261,7 @@ function renderRecipes() {
     h3Element.textContent = `${recipeBook[i].name} (${recipeBook[i].ingredientsOnHand} Ingredients on Hand)`;
     imageElement.src = 'https://via.placeholder.com/150';
     favoriteImg.src = 'https://via.placeholder.com/40';
-    favoriteDiv.addEventListener('click', favoriteButtonSelected);
+    favoriteDiv.addEventListener('click', onFavoriteButtonSelected);
 
     //append elements
     imageDiv.appendChild(imageElement);
@@ -264,38 +291,66 @@ function onIngredientSelect(event) {
     changeIngredientsOnHand(event.target.value, -1);
   }
   renderRecipes();
+  saveToLocalStorage();
 }
 
-//create a function that takes an ingredient that's selected and take -1 or +1 to change ingredients on hand
 
+//create a function that takes an ingredient that's selected and take -1 or +1 to change ingredients on hand
 function changeIngredientsOnHand(ingredient, positive1Negative1) {
   for (var i = 0; i < recipeBook.length; i++) {
     for (var j = 0; j < recipeBook[i].ingredients.length; j++) {
       if (recipeBook[i].ingredients[j] === ingredient) {
         recipeBook[i].ingredientsOnHand += positive1Negative1;
-        console.log(recipeBook[i].name + ' - contains: ' + ingredient + ' onHand: ' + recipeBook[i].ingredientsOnHand);
+        // console.log(recipeBook[i].name + ' - contains: ' + ingredient + ' onHand: ' + recipeBook[i].ingredientsOnHand);
       }
     }
   }
 }
 
-function favoriteButtonSelected(event) {
+function onFavoriteButtonSelected(event) {
   console.log('FAVORITE BUTTON SELECTED' + event);
+}
+
+function loadCurrentUsersData() {
+  if (currentUserName) {
+    console.log('Loading current user data...');
+    console.log('____________________________');
+    selectedIngredients = allUsersData[currentUserName].userIngredients;
+    favoriteRecipes = allUsersData[currentUserName].userRecipes;
+    console.log('Name: ' + currentUserName);
+    console.log('Password: ' + allUsersData[currentUserName].password);
+    console.log('User Ingredients: ');
+
+    console.log(selectedIngredients);
+    console.log('User Recipes: ' + favoriteRecipes);
+  }
+}
+
+function onPageLoad() {
+  // retrieve local storage
+  retrieveLocalStorage();
+  //set local current user data to retrieved data
+  loadCurrentUsersData();
+  // create array of unique ingredients
+  buildIngredientArrays();
+  renderIngredientsTable();
+  renderRecipes();
 }
 
 
 
 
 // ------------ CALLS ------------
-buildIngredientArrays();
-renderIngredientsTable();
-renderRecipes();
-handleLogin('TEMP USER', 'ADMIN PASSWORD');
-handleLogin('TEMP USER2', 'ADMIN PASSWORD');
-handleLogin('TEMP USER', 'ADMIN PASSWORD');
-handleLogin('Benjamin', 'ADMIN PASSWORD');
-saveToLocalStorage();
-// retrieveLocalStorage();
+
+onPageLoad();
+
+
+// test calls
+// handleLogin('TEMP USER', 'ADMIN PASSWORD');
+// handleLogin('TEMP USER2', 'ADMIN PASSWORD');
+// handleLogin('TEMP USER', 'ADMIN PASSWORD');
+// handleLogin('Benjamin', 'ADMIN PASSWORD');
+// saveToLocalStorage();
 
 
 
