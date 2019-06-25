@@ -116,6 +116,7 @@ main > section:last-child > h2 {
   font-size: 18px;
   display: inline-block;
   padding: 2px;
+<<<<<<< HEAD
   font-style: italic;
 }
 
@@ -123,4 +124,16 @@ main > section:last-child > h2 {
   background-color: #00ccff;
   color: black;
   font-weight: bold;
+=======
+}
+
+.login{
+  position: sticky;
+  float: left;
+  padding: 20px;
+  width: 500px;
+  /* display: inline; */
+  /* visibility: hidden; */
+
+>>>>>>> a55814d8cef06f03cdce0810a9bf7b03db8057df
 }
