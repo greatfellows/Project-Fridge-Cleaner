@@ -1,5 +1,7 @@
+/* main {
+  display: grid;
 
-
+} */
 
 main > section:first-child {
   border-radius: 10px;
@@ -138,5 +140,4 @@ main > section:last-child > h2 {
   width: 500px;
   /* display: inline; */
   /* visibility: hidden; */
-
 }
