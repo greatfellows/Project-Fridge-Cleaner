@@ -1,12 +1,13 @@
 'use strict';
 
-if(userList.userName.password === password) {
-  handleLogin( username, password);
-}
-else {
-  alert('invalid user');
-}
 
-document.getElementById('submit').addEventListener('click', handleLogin);
 
+var loginButton = document.getElementById('submit');
+loginButton.addEventListener('click', submitLogin);
+function submitLogin(){
+  event.preventDefault();
+  //add username and password to object User/local storage;
+  localStorage.setItem('username', 'password');
+  console.log(username.value);
+}
 //expected string arguments username and password
