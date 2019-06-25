@@ -99,6 +99,10 @@ main > section:last-child > h2 {
   margin-bottom: 10px;
 }
 
+#recipes > div > div:nth-child(2) > div > img {
+  width: 40px;
+}
+
 #recipes h3 {
   display: inline-block;
   font-size: 25px;

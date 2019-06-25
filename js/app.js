@@ -233,7 +233,7 @@ function renderRecipes() {
     // add element content
     h3Element.textContent = `${recipeBook[i].name} (${recipeBook[i].ingredientsOnHand} Ingredients on Hand)`;
     imageElement.src = 'https://via.placeholder.com/150';
-    favoriteImg.src = 'imgs/heart-before.png';
+    favoriteImg.src = './imgs/heart-before.jpg';
     favoriteImg.className = 'unliked';
     favoriteDiv.addEventListener('click', favoriteButtonSelected);
 
@@ -284,11 +284,10 @@ function favoriteButtonSelected(event) {
   console.log('FAVORITE BUTTON SELECTED' + event);
   if (event.target.className === 'unliked') {
     event.target.className = 'liked';
-    event.target.src = 'imgs/heart-after.png';
-    
+    event.target.src = './imgs/heart-after.png';
   } else {
     event.target.className = 'unliked';
-    event.target.src = 'imgs/heart-before.png';
+    event.target.src = './imgs/heart-before.jpg';
   }
 }
 
