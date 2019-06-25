@@ -99,6 +99,11 @@ main > section:last-child > h2 {
 }
 
 .login{
-  position: fixed;
-  visibility: hidden;
+  position: sticky;
+  float: left;
+  padding: 20px;
+  width: 500px;
+  /* display: inline; */
+  /* visibility: hidden; */
+
 }
