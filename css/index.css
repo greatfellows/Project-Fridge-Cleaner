@@ -117,6 +117,30 @@ main > section:last-child > h2 {
   display: inline-block;
   padding: 2px;
 <<<<<<< HEAD
+}
+
+
+.heartButton{
+  margin-left:auto;
+  margin-right: auto;
+  display: block;
+
+  transition: background-color,height,width 0.5s ease;
+
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  border-radius: 49px;
+
+}
+
+.heartButton.on{
+  background-color: red;
+  height: 120px;
+  width: 120px;
+  border-radius: 59px;
+=======
+<<<<<<< HEAD
   font-style: italic;
 }
 
@@ -136,4 +160,5 @@ main > section:last-child > h2 {
   /* visibility: hidden; */
 
 >>>>>>> a55814d8cef06f03cdce0810a9bf7b03db8057df
+>>>>>>> 8fa65f46d6cffd8e88f82224edaca1fec7a60cba
 }
