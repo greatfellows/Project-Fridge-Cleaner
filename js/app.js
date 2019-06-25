@@ -126,6 +126,8 @@ var selectedIngredients = {};
 // current user UserName
 var currentUserName;
 
+var sortRecipesBy = 'ingredients';
+
 
 // ------------ FUNCTIONS (User related) ------------
 
@@ -157,6 +159,8 @@ function handleLogin(userName, password) {
 
 function handleLogout() {
   // TODO: unload current user data
+  console.log('user logged out -------');
+  saveToLocalStorage();
   currentUserName = null;
 }
 
@@ -226,13 +230,34 @@ function renderIngredientsTable() {
   }
 }
 
+function sortRecipeBookByIngredients() {
+  recipeBook.sort(function (a, b) {
+    return b.ingredientsOnHand - a.ingredientsOnHand;
+  });
+}
+
+// TODO make function
+function sortRecipeBookByCategory() {
+  recipeBook.sort(function (a, b) {
+    var nameA = a.category.toUpperCase();
+    var nameB = b.category.toUpperCase();
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+
+    // names must be equal
+    return 0;
+  });
+}
+
 // render recipes
 function renderRecipes() {
 
   // sort recipeBook by # of ingredients on hand
-  recipeBook.sort(function (a, b) {
-    return b.ingredientsOnHand - a.ingredientsOnHand;
-  });
+  sortRecipeBookByIngredients();
   // get recipe container DIV
   var recipeContainer = document.getElementById('recipes');
   // clear recipe container DIV
@@ -264,7 +289,7 @@ function renderRecipes() {
     }
 
     // add element content
-    h3Element.textContent = `${recipeBook[i].name} (${recipeBook[i].ingredientsOnHand} Ingredients on Hand)`;
+    h3Element.textContent = `${recipeBook[i].name} (${recipeBook[i].ingredientsOnHand} Ingredients on Hand) ${recipeBook[i].category}`;
     imageElement.src = 'https://via.placeholder.com/150';
 
     //if recipe is already in favorite recipes, assign .liked
@@ -325,6 +350,7 @@ function changeIngredientsOnHand(ingredient, positive1Negative1) {
 }
 
 function onFavoriteButtonSelected(event) {
+  // TODO add favorited recipe to favoriteRecipes
   console.log('FAVORITE BUTTON SELECTED' + event);
   if (event.target.className === 'unliked') {
     event.target.className = 'liked';
@@ -380,7 +406,8 @@ onPageLoad();
 
 
 // test calls
-// handleLogin('TEMP USER', 'ADMIN PASSWORD');
+handleLogin('TEMP USER', 'ADMIN PASSWORD');
+handleLogout();
 // handleLogin('TEMP USER2', 'ADMIN PASSWORD');
 // handleLogin('TEMP USER', 'ADMIN PASSWORD');
 handleLogin('Benjamin', 'ADMIN PASSWORD');
