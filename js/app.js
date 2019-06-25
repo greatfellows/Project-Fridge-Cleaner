@@ -115,10 +115,15 @@ var allIngredients = [];
 // all currently user selected ingredients
 var selectedIngredients = {};
 
-// all users 
-var userList = {};
+// all users data object to push to Local storage
+var allUsersData = {};
+var localStorageKey = 'localStorageKey';
 
+// list of current favorite recipes
 var favoriteRecipes = [];
+
+// current user UserName
+var currentUserName;
 
 
 // ------------ FUNCTIONS (User related) ------------
@@ -128,14 +133,14 @@ function User(userName, password, userIngredients, userRecipes) {
   this.password = password;
   this.userIngredients = userIngredients;
   this.userRecipes = userRecipes;
-  userList[userName] = this;
+  allUsersData[userName] = this;
 }
 
 
 
 function handleLogin(userName, password) {
   // check if user already exists
-  if (userList[userName]) {
+  if (allUsersData[userName]) {
     // if so login
     console.log(userName + ' exists!!!!');
 
@@ -143,9 +148,24 @@ function handleLogin(userName, password) {
     // if not create
     new User(userName, password, selectedIngredients, favoriteRecipes);
     console.log(userName + ' Created!!!!');
-
   }
+
+  currentUserName = userName;
 }
+
+function retrieveLocalStorage() {
+  console.log('retrieveLocalStorage');
+  var dataRetrieved = JSON.parse(localStorageKey);
+  allUsersData = dataRetrieved;
+}
+
+function saveToLocalStorage() {
+  console.log('saveToLocalStorage');
+
+  var dataToStore = JSON.stringify(allUsersData);
+  localStorage.setItem(localStorageKey, dataToStore);
+}
+
 // ------------ FUNCTIONS ------------
 
 
@@ -271,6 +291,11 @@ buildIngredientArrays();
 renderIngredientsTable();
 renderRecipes();
 handleLogin('TEMP USER', 'ADMIN PASSWORD');
+handleLogin('TEMP USER2', 'ADMIN PASSWORD');
+handleLogin('TEMP USER', 'ADMIN PASSWORD');
+handleLogin('Benjamin', 'ADMIN PASSWORD');
+saveToLocalStorage();
+// retrieveLocalStorage();
 
 
 
