@@ -21,19 +21,20 @@ main > section:first-child > h2 {
 
 #ingredients {
   display: grid;
-  grid-template-columns: repeat(3, 200px);
+  grid-template-columns: repeat(4, 180px);
   grid-template-rows: auto;
   grid-gap: 5px;
   margin: auto;
   width: 960px;
   justify-content: space-evenly;
+  overflow: auto;
 }
 
 #ingredients > input {
   border: 0px;
   font-size: 15px;
   place-self: center;
-  width: 200px;
+  width: 180px;
 }
 
 .buttonOn {
@@ -50,8 +51,6 @@ main > section:first-child > h2 {
 
 main > section:last-child {
   background-color: lightgoldenrodyellow;
-  height: 530px;
-  overflow: auto;
   padding-bottom: 10px;
 }
 
@@ -68,7 +67,6 @@ main > section:last-child > h2 {
   margin: auto;
   padding: 0px 10px;
   width: 980px;
-  overflow: auto;
 }
 
 #recipes > div {
@@ -96,4 +94,10 @@ main > section:last-child > h2 {
   font-size: 15px;
   display: inline-block;
   padding: 2px;
+}
+
+.selectedIngredient {
+  background-color: #00ccff;
+  color: white;
+  font-weight: bold;
 }
