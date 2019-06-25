@@ -1,6 +1,18 @@
 html {
   background-color: black;
-  padding: 20px;
+}
+
+body {
+  margin: auto;
+  width: 1280px;
+}
+
+body > input {
+  color: black;
+  font-size: 15px;
+  margin: 5px 0px;
+  /* padding: 10px 0px; */
+  float: right;
 }
 
 header {
@@ -10,27 +22,28 @@ header {
   overflow: auto;
 }
 
+
 header > div {
   float: left;
-  font-size: 0px;
-  width: 300px;
 }
 
 header > div > img {
-  float:left;
+  float: left;
+  margin-right: 20px;
 }
 
 header > div > div {
-  float:left;
-  width: 150px;
+  float: left;
+  margin: 20px 0px;
 }
 
 header > div > div > h1 {
-  font-size: 50px;
+  font-size: 75px;
 }
 
 header > div > div > h4 {
   font-size: 20px;
+  margin-top: 10px;
 }
 
 nav {
@@ -43,6 +56,14 @@ nav li{
   font-size: 30px;
   margin: 30px 50px 30px 0px;
   padding: 30px 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
 }
 
 footer {
