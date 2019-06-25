@@ -118,7 +118,6 @@ main > section:last-child > h2 {
   font-size: 18px;
   display: inline-block;
   padding: 2px;
-  font-style: italic;
 }
 
 .selectedIngredient {
@@ -135,4 +134,5 @@ main > section:last-child > h2 {
   width: 500px;
   /* display: inline; */
   /* visibility: hidden; */
+
 }
