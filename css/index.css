@@ -1,5 +1,7 @@
+/* main {
+  display: grid;
 
-
+} */
 
 main > section:first-child {
   border-radius: 10px;
@@ -141,5 +143,4 @@ body > h4{
   width: auto;
   /* display: inline; */
   /* visibility: hidden; */
-
 }

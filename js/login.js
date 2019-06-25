@@ -14,7 +14,7 @@ function submitLogin(){
   handleLogin(username, password);
 }
 
-var loginButton = document.getElementById('login');
+var loginButton = document.getElementById('loginbutton');
 loginButton.addEventListener('click', loginNow);
 function loginNow(){
   

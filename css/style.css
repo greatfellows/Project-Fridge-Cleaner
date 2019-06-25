@@ -1,7 +1,18 @@
 html {
   background-color: black;
-  padding: 20px;
-  
+}
+
+body {
+  margin: auto;
+  width: 1280px;
+}
+
+body > input {
+  color: black;
+  font-size: 15px;
+  margin: 5px 0px;
+  /* padding: 10px 0px; */
+  float: right;
 }
 
 header {
@@ -10,6 +21,7 @@ header {
   width: 1280px;
   overflow: auto;
 }
+
 
 header > div {
   float: left;
