@@ -87,6 +87,9 @@ main > section:last-child > h2 {
   margin-right: 10px;
   width: 150px;
 }
+#recipes > div > div:first-child >img{
+  width : 150px;
+}
 
 #recipes > div > div:nth-child(2) {
   float: left;
