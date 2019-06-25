@@ -257,7 +257,7 @@ function sortRecipeBookByCategory() {
 function renderRecipes() {
 
   // sort recipeBook by # of ingredients on hand
-  sortRecipeBookByCategory();
+  sortRecipeBookByIngredients();
   // get recipe container DIV
   var recipeContainer = document.getElementById('recipes');
   // clear recipe container DIV
