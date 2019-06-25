@@ -111,12 +111,63 @@ var recipeBook = [{ name: 'Banana Cake', ingredientsOnHand: 0, image: 'http://so
 
 // all unique ingredients list
 var allIngredients = [];
-//all currently user selected ingredients
 
+// all currently user selected ingredients
 var selectedIngredients = {};
 
+// all users data object to push to Local storage
+var allUsersData = {};
+var localStorageKey = 'localStorageKey';
+
+// list of current favorite recipes
+var favoriteRecipes = [];
+
+// current user UserName
+var currentUserName;
+
+
+// ------------ FUNCTIONS (User related) ------------
+
+function User(userName, password, userIngredients, userRecipes) {
+  this.userName = userName;
+  this.password = password;
+  this.userIngredients = userIngredients;
+  this.userRecipes = userRecipes;
+  allUsersData[userName] = this;
+}
+
+
+
+function handleLogin(userName, password) {
+  // check if user already exists
+  if (allUsersData[userName]) {
+    // if so login
+    console.log(userName + ' exists!!!!');
+
+  } else {
+    // if not create
+    new User(userName, password, selectedIngredients, favoriteRecipes);
+    console.log(userName + ' Created!!!!');
+  }
+
+  currentUserName = userName;
+}
+
+function retrieveLocalStorage() {
+  console.log('retrieveLocalStorage');
+  var dataRetrieved = JSON.parse(localStorageKey);
+  allUsersData = dataRetrieved;
+}
+
+function saveToLocalStorage() {
+  console.log('saveToLocalStorage');
+
+  var dataToStore = JSON.stringify(allUsersData);
+  localStorage.setItem(localStorageKey, dataToStore);
+}
 
 // ------------ FUNCTIONS ------------
+
 
 // get all unique ingredients from all recipes and put them in allIngredients array
 function buildIngredientArrays() {
@@ -185,9 +236,6 @@ function renderRecipes() {
     favoriteImg.src = 'https://via.placeholder.com/40';
     favoriteDiv.addEventListener('click', favoriteButtonSelected);
 
-
-
-
     //append elements
     imageDiv.appendChild(imageElement);
     favoriteDiv.appendChild(favoriteImg);
@@ -242,6 +290,12 @@ function favoriteButtonSelected(event) {
 buildIngredientArrays();
 renderIngredientsTable();
 renderRecipes();
+handleLogin('TEMP USER', 'ADMIN PASSWORD');
+handleLogin('TEMP USER2', 'ADMIN PASSWORD');
+handleLogin('TEMP USER', 'ADMIN PASSWORD');
+handleLogin('Benjamin', 'ADMIN PASSWORD');
+saveToLocalStorage();
+// retrieveLocalStorage();
 
 
 
