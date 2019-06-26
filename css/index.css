@@ -1,9 +1,9 @@
-/* main {
+main {
   display: grid;
   width: 1280px;
   grid-gap: 20px;
   grid-template-columns: 630px 630px
-} */
+}
 
 main > section:first-child {
   border-radius: 10px;
@@ -55,11 +55,12 @@ main > section:first-child > h2 {
   color: #00a3cc;
 }
 
+
 main > section:last-child {
   background-color: lightgoldenrodyellow;
   margin: 20px auto;
   padding-bottom: 10px;
-  width: 1024px;
+  width: 630px;
 }
 
 main > section:last-child > h2 {
@@ -71,71 +72,72 @@ main > section:last-child > h2 {
   text-align: center;
 }
 
+/* width 620px */
 #recipes {
   margin: auto;
-  padding: 0px 10px;
-  width: 980px;
+  padding: 0px 5px;
+  width: 620px;
 }
 
+/* individual recipe wrap */
 #recipes > div {
   background-color: white;
-  height: 150px;
+  height: 100px;
   margin-bottom: 10px;
-  font-size: 0px;
 }
 
-
-/* img wrap */
+/* img wrap width 105px */
 #recipes > div > div:first-child {
   float: left;
-  height: 150px;
+  height: 100px;
   object-fit: contain;
-  margin-right: 10px;
-  width: 150px;
+  margin-right: 5px;
+  width: 100px;
 }
 
-#recipes > div > div:first-child >img{
-  width : 150px;
+/* img width 100px */
+#recipes > div > div:first-child >img {
+  width : 100px;
 }
 
-/* recipe title + ingredients + fav button wrapper */
+/* recipe title + ingredients + fav button wrapper  width 515px */
 #recipes > div > div:nth-child(2) {
   float: left;
-  width: 820px;
+  width: 515px;
 }
 
-/* fav button wrapper */
+/* fav button wrapper width 25px */
 #recipes > div > div:nth-child(2) > div {
   object-fit: contain;
   float: right;
-  height: 40px;
-  width: 40px;
-  margin-bottom: 10px;
+  height: 25px;
+  width: 25px;
 }
 
-/* fav button */
+/* fav button width 25px */
 #recipes > div > div:nth-child(2) > div > img {
-  width: 40px;
+  width: 25px;
 }
 
-/* recipe title */
+/* recipe title width 490px */
 #recipes h3 {
   display: inline-block;
-  font-size: 25px;
-  height: 30px;
-  padding: 10px 0px;
-  width: 780px;
+  font-size: 20px;
+  height: 20px;
+  padding: 2.5px 0px;
+  width: 490px;
 }
 
 #recipes ul {
   float: left;
-  height: 90px;
-  width: 780px;
+  height: 65px;
   overflow: auto;
+  padding-bottom: 10px;
+  width: 490px;
 }
 
 #recipes li {
-  font-size: 18px;
+  font-size: 13px;
   display: inline-block;
   padding: 2px;
 }
