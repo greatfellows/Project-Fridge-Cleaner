@@ -3,21 +3,32 @@ html{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-head{
-
-}
-
 body {
   margin: auto;
   width: 1280px;
-
 }
 
-body > input {
+header {
+  position: relative;
+  width: 1280px;
+}
+
+#loginDiv {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+#loginDiv > h4 {
+  font-size: 35px;
+  display: inline-block;
+}
+
+#loginDiv > input {
   color: black;
+  display: inline-block;
   font-size: 15px;
   margin: 5px 0px;
-  float: right;
 }
 
 header {
@@ -25,7 +36,7 @@ header {
   margin: auto;
   width: 1280px;
   overflow: auto;
-  }
+}
 
 header > div:last-child {
   float: left;

@@ -70,7 +70,8 @@ main > section:last-child { /* recipe container*/
   padding-bottom: 10px;
   width: 630px;
   border-radius: 30px;
-
+  overflow: auto;
+  padding-bottom: 10px;
 }
 
 main > section:last-child > h2 { /* recipe header */
@@ -93,22 +94,20 @@ main > section:last-child > h2 { /* recipe header */
 #recipes > div { /* background of individual card*/
   background-color: #eb9486;
   height: 100px;
-  margin-bottom: 10px;
-  overflow: hidden;
-  
+  margin-bottom: 10px; 
 }
 
 /* img wrap width 105px */
 #recipes > div > div:first-child {
   float: left;
   height: 100px;
-  object-fit: contain;
   margin-right: 5px;
   width: 100px;
 }
-#recipes > div > div:first-child >img{
+
+#recipes > div > div:first-child > img {
+  object-fit: contain;
   width : 100px;
-  
 }
 
 /* recipe title + ingredients + fav button wrapper  width 515px */
