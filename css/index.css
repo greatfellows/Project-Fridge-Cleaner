@@ -1,28 +1,27 @@
-/* main {
-  display: grid;
-
-} */
-
-main > section:first-child {
+/*FOR STYLING, PLEASE SEE STYLES.CSS EVERYTHING ON INDEX.CSS IS ABOUT THE CONTAINER OR THE INFORMATION INSIDE OF STATED CONTAINER*/
+/*INGREDIENT GRID STYLING*/
+main > section:first-child { /* ingredients container*/
   border-radius: 10px;
   border: 20px solid white;
-  background-color: rgb(226,245,250);
+  background-color: rgba(104, 186, 233, 0.61);
   height: 400px;
   margin: 20px auto;
   overflow: auto;
   width: 984px;
 }
 
-main > section:first-child > h2 {
-  background-color:#00a3cc;
+main > section:first-child > h2 { /* ingredients header */
+  background-color:#07596d;
   font-size: 40px;
   padding: 10px 0px;
   position: sticky;
   top: 0;
   text-align: center;
+  color: rgb(224, 222, 222);
+
 }
 
-#ingredients {
+#ingredients { 
   display: grid;
   grid-template-columns: repeat(4, 180px);
   grid-template-rows: auto;
@@ -39,42 +38,47 @@ main > section:first-child > h2 {
   width: 180px;
 }
 
-.buttonOn {
+.buttonOn { /* ingredient button clicked */
   background-color: lightskyblue;
   color: white;
   font-size: 15px;
 }
 
-.buttonOff {
+.buttonOff { /* ingredient button unclicked */
   background-color: white;
-  color: #00a3cc;
+  color: #07596d;
   font-size: 15px;
 }
 
-main > section:last-child {
-  background-color: lightgoldenrodyellow;
+
+/*RECIPE CARD STYLING*/
+
+main > section:last-child { /* recipe container*/
+  background-color: rgb(213, 173, 112);
   margin: 20px auto;
   padding-bottom: 10px;
   width: 1024px;
 }
 
-main > section:last-child > h2 {
-  background: lightgoldenrodyellow;
+main > section:last-child > h2 { /* recipe header */
+  background: rgb(122, 121, 119);
   position: sticky;
   top: 0;
   font-size: 40px;
   padding: 10px;
   text-align: center;
+  color: rgb(224, 222, 222);
+
 }
 
-#recipes {
+#recipes { /* container */
   margin: auto;
   padding: 0px 10px;
   width: 980px;
 }
 
-#recipes > div {
-  background-color: white;
+#recipes > div { /* background of individual card*/
+  background-color: rgb(213, 173, 112);
   height: 150px;
   margin-bottom: 10px;
   font-size: 0px;
@@ -89,6 +93,7 @@ main > section:last-child > h2 {
 }
 #recipes > div > div:first-child >img{
   width : 150px;
+  
 }
 
 #recipes > div > div:nth-child(2) {
@@ -129,8 +134,8 @@ main > section:last-child > h2 {
   padding: 2px;
 }
 
-.selectedIngredient {
-  background-color: #00ccff;
+.selectedIngredient { /*HIGHTLIGHTS INGREDIENT IN RECIPE*/
+  background-color: #35df6d;
   color: black;
   font-weight: bold;
 }
@@ -139,6 +144,8 @@ body > h4{
   margin: 10px;
   padding: 10px;
 }
+
+/*LOG IN FORM STYLING*/
 #formInvis{
   display: none;
   position: absolute;
@@ -146,7 +153,7 @@ body > h4{
 
 #formVis{
   /* DO NOT CHANGE THE SIZES HERE */
-  background-color: gray;
+  background-color: rgb(122, 121, 119);
   padding: 20px;
   left: 0;
   right: 0;
@@ -158,6 +165,3 @@ body > h4{
   
 }
 
-#formInvis{
-  display: none;
-}  

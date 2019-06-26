@@ -1,5 +1,6 @@
-html {
-  background-color: black;
+html{
+  background-color: rgb(42, 43, 48);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -11,12 +12,11 @@ body > input {
   color: black;
   font-size: 15px;
   margin: 5px 0px;
-  /* padding: 10px 0px; */
   float: right;
 }
 
 header {
-  background-color: lightgoldenrodyellow;
+  background-color: rgba(241, 205, 129);
   margin: auto;
   width: 1280px;
   overflow: auto;
@@ -60,6 +60,7 @@ nav li{
 
 a {
   text-decoration: none;
+  
 }
 
 a:visited {

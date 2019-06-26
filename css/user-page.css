@@ -3,38 +3,54 @@ html{
     padding: 20px;
     background-color: black;
 }
+
+body {
+  margin: auto;
+  width: 1280px;
+}
+
+body > input {
+  color: black;
+  font-size: 15px;
+  margin: 5px 0px;
+  float: right;
+}
 header {
-    background-color: lightgoldenrodyellow;
-    margin: auto;
-    width: 1280px;
-    overflow: auto;
-  }
-  h3{
+  background-color: rgb(91, 48, 3);
+  margin: auto;
+  width: 1280px;
+  overflow: auto;
+}
+
+h3{
     color: white;
     font-size: 50px;
     padding: 20px;
   }
-  header > div {
+header > div {
     float: left;
-    font-size: 0px;
-    width: 300px;
   }
   
-  header > div > img {
+  
+header > div > img {
     float:left;
+    margin-right: 20px;
+
   }
   
-  header > div > div {
+header > div > div {
     float:left;
-    width: 150px;
+    margin: 20px 0px;
   }
   
   header > div > div > h1 {
-    font-size: 50px;
+    font-size: 75px;
   }
   
   header > div > div > h4 {
     font-size: 20px;
+    margin-top: 10px;
+
   }
   
   nav {
@@ -51,18 +67,18 @@ header {
   main > section {
     margin: 20px auto;
     width: 1024px;
-    background-color: lightgoldenrodyellow;
+    background-color: rgb(91, 48, 3);
     height: 530px;
     overflow: auto;
     padding-bottom: 10px;
   }
-  h2{
+h2{
       text-align: center;
       color : black;
       font-size: 50px;
       padding: 20px;
   }
-  footer{
+footer{
       color: white;
   }
   
