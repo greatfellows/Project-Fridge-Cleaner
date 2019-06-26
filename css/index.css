@@ -90,7 +90,7 @@ main > section:last-child > h2 { /* recipe header */
 
 #recipes > div { /* background of individual card*/
   background-color: rgb(213, 173, 112);
-  height: 150px;
+  height: 100px;
   margin-bottom: 10px;
 }
 
