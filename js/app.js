@@ -141,32 +141,53 @@ function User(userName, password, userIngredients, userRecipes) {
 }
 
 
-
 function handleLogin(userName, password) {
-  // check if user already exists
+
+  // change login button to logout button
+  var loginButton = document.getElementById('loginbutton');
+  loginButton.value = 'Sign Out';
+
+  // render current user name to top of screen
+  loginButton.parentNode.firstChild.textContent = currentUserName;
+
+  // check if user already exists login
   if (allUsersData[userName]) {
-    // if so login
-    console.log(userName + ' exists!!!!');
     currentUserName = userName;
     loadCurrentUsersData();
-  } else {
+    renderAll();
+
     // if not create
+  } else {
     new User(userName, password, selectedIngredients, favoriteRecipes);
-    console.log(userName + ' Created!!!!');
     currentUserName = userName;
   }
+
   saveToLocalStorage();
 }
 
 function handleLogout() {
-  // TODO: unload current user data
-  console.log('user logged out -------');
+  // change logout button to login button
+  var loginButton = document.getElementById('loginbutton');
+  loginButton.value = 'Sign In';
+
+  // clear current username on top of screen
+  loginButton.parentNode.firstChild.textContent = '    ';
+
+  // save to local storage
   saveToLocalStorage();
-  currentUserName = null;
+
+  // unload current user data
+  currentUserName = '';
+  favoriteRecipes = [];
+  selectedIngredients = {};
+  clearIngredientsOnHand();
+
+  // save to Local and re-render
+  saveToLocalStorage();
+  renderAll();
 }
 
 function retrieveLocalStorage() {
-  console.log('retrieveLocalStorage');
 
   var dataRetrieved = localStorage.getItem(allUsersKey);
   //  if data exists
@@ -176,14 +197,14 @@ function retrieveLocalStorage() {
   }
 
   var storedUserName = localStorage.getItem(userNameKey);
-  //  if data exists
+  //  if there is a stored current user name log them in
   if (storedUserName) {
     currentUserName = storedUserName;
+    handleLogin(currentUserName);
   }
 }
 
 function saveToLocalStorage() {
-  console.log('saveToLocalStorage');
 
   // update allUserData current user information
   if (currentUserName) {
@@ -193,9 +214,9 @@ function saveToLocalStorage() {
     // stingify and save all user data to storage
     var dataToStore = JSON.stringify(allUsersData);
     localStorage.setItem(allUsersKey, dataToStore);
-    // save current username to storage
-    localStorage.setItem(userNameKey, currentUserName);
   }
+  // save current username to storage
+  localStorage.setItem(userNameKey, currentUserName);
 }
 
 // ------------ FUNCTIONS ------------
@@ -214,19 +235,23 @@ function buildIngredientArrays() {
 
 // render ingredients table
 function renderIngredientsTable() {
-  // go through allIngredients
+  //get ingredients section
+  var ingredientsDiv = document.getElementById('ingredients');
+  //clear ingredients section
+  ingredientsDiv.innerHTML = '';
+  // go through allIngredients list and create a button for it
   for (var i = 0; i < allIngredients.length; i++) {
     var buttonElement = document.createElement('input');
     buttonElement.type = 'button';
     buttonElement.value = allIngredients[i];
-    // TODO if current ingredient is in selected ingredients list set class to buttonON
+    //if current ingredient is in selected ingredients list set class to buttonON
     if (selectedIngredients[allIngredients[i]] === 1) {
       buttonElement.className = 'buttonOn';
     } else {
       buttonElement.className = 'buttonOff';
     }
     buttonElement.addEventListener('click', onIngredientSelect);
-    var ingredientsDiv = document.getElementById('ingredients');
+    // add button to ingredient section
     ingredientsDiv.appendChild(buttonElement);
   }
 }
@@ -344,15 +369,20 @@ function changeIngredientsOnHand(ingredient, positive1Negative1) {
     for (var j = 0; j < recipeBook[i].ingredients.length; j++) {
       if (recipeBook[i].ingredients[j] === ingredient) {
         recipeBook[i].ingredientsOnHand += positive1Negative1;
-        // console.log(recipeBook[i].name + ' - contains: ' + ingredient + ' onHand: ' + recipeBook[i].ingredientsOnHand);
       }
     }
   }
 }
 
+function clearIngredientsOnHand() {
+  for (var i = 0; i < recipeBook.length; i++) {
+    recipeBook[i].ingredientsOnHand = 0;
+  }
+
+}
+
 function onFavoriteButtonSelected(event) {
   // TODO add favorited recipe to favoriteRecipes
-  console.log('FAVORITE BUTTON SELECTED' + event);
   if (event.target.className === 'unliked') {
     event.target.className = 'liked';
     event.target.src = './imgs/heart-after.png';
@@ -374,26 +404,29 @@ function onFavoriteButtonSelected(event) {
 
 function loadCurrentUsersData() {
   if (currentUserName) {
-    // console.log('Loading current user data...');
-    // console.log('____________________________');
     selectedIngredients = allUsersData[currentUserName].userIngredients;
+    // clear all ingredients on hand
+    clearIngredientsOnHand();
+    // loop through recipe book and adjust ingredients on hand up by 1 for all selected ingredients
+    var keys = Object.keys(selectedIngredients);
+    for (var i = 0; i < keys.length; i++) {
+      changeIngredientsOnHand(keys[i], 1);
+    }
     favoriteRecipes = allUsersData[currentUserName].userRecipes;
-    // console.log('Name: ' + currentUserName);
-    // console.log('Password: ' + allUsersData[currentUserName].password);
-    // console.log('User Ingredients: ');
-
-    // console.log(selectedIngredients);
-    // console.log('User Recipes: ' + favoriteRecipes);
   }
 }
 
 function onPageLoad() {
+  // create array of unique ingredients
+  buildIngredientArrays();
   // retrieve local storage
   retrieveLocalStorage();
   //set local current user data to retrieved data
   loadCurrentUsersData();
-  // create array of unique ingredients
-  buildIngredientArrays();
+  renderAll();
+}
+
+function renderAll() {
   renderIngredientsTable();
   renderRecipes();
 }
@@ -407,11 +440,11 @@ onPageLoad();
 
 
 // test calls
-handleLogin('TEMP USER', 'ADMIN PASSWORD');
-handleLogout();
+// handleLogin('TEMP USER', 'ADMIN PASSWORD');
+// handleLogout();
 // handleLogin('TEMP USER2', 'ADMIN PASSWORD');
 // handleLogin('TEMP USER', 'ADMIN PASSWORD');
-handleLogin('Benjamin', 'ADMIN PASSWORD');
+// handleLogin('Benjamin', 'ADMIN PASSWORD');
 // saveToLocalStorage();
 
 

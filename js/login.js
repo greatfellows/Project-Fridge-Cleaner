@@ -2,17 +2,26 @@
 
 // add event listener to login button - triggers popup login form
 var loginButton = document.getElementById('loginbutton');
-loginButton.addEventListener('click', popupForm);
-
-// change id of login form to fromVis to style visible
-function popupForm() {
-  var popupForm = document.getElementById('formInvis');
-  popupForm.id = 'formVis';
-}
+loginButton.addEventListener('click', loginLogoutButtonClicked);
 
 // add evnet listener to login form submit button - triggers submitLogin call
 var submitButton = document.getElementById('submit');
 submitButton.addEventListener('click', submitLogin);
+
+// change id of login form to fromVis to style visible
+function loginLogoutButtonClicked() {
+  // if user is clicking sign in
+  if (loginButton.value === "Sign In") {
+    var popupForm = document.getElementById('formInvis');
+    popupForm.id = 'formVis';
+  }
+  // if user is clicking sign out
+  if (loginButton.value === "Sign Out") {
+    handleLogout();
+  }
+
+}
+
 
 // get username and password from login form and pass as arguments to function handleLogin() on app.js
 function submitLogin() {
@@ -38,11 +47,9 @@ function submitLogin() {
     handleLogin(username, password);
   }
 
-
   // make login form invisible again
   var popDown = document.getElementById('formVis');
   popDown.id = 'formInvis';
 }
-
 
 
