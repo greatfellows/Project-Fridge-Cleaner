@@ -165,7 +165,3 @@ main > section:last-child > h2 {
   height: 80PX;
   z-index: 1; 
 }
-
-#formInvis{
-  display: none;
-}
