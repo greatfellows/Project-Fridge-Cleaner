@@ -182,7 +182,7 @@ function renderRecipes() {
     }
 
     // add element content
-    h3Element.textContent = `${recipeBook[i].name} (${recipeBook[i].ingredientsOnHand} Ingredients on Hand) ${recipeBook[i].category}`;
+    h3Element.textContent = `${recipeBook[i].name} ( ${recipeBook[i].ingredientsOnHand} )`;
     imageElement.src = recipeBook[i].image;
 
     //if recipe is already in favorite recipes, assign .liked

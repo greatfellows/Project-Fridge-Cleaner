@@ -1,3 +1,6 @@
+
+/*FOR STYLING, PLEASE SEE STYLES.CSS EVERYTHING ON INDEX.CSS IS ABOUT THE CONTAINER OR THE INFORMATION INSIDE OF STATED CONTAINER*/
+/*INGREDIENT GRID STYLING*/
 main {
   display: grid;
   width: 1280px;
@@ -15,16 +18,18 @@ main > section:first-child {
   width: 620px;
 }
 
-main > section:first-child > h2 {
-  background-color:#00a3cc;
+main > section:first-child > h2 { /* ingredients header */
+  background-color:#114B5F;
   font-size: 40px;
   padding: 10px 0px;
   position: sticky;
   top: 0;
   text-align: center;
+  color: rgb(224, 222, 222);
+
 }
 
-#ingredients {
+#ingredients { 
   display: grid;
   grid-template-columns: repeat(4, 150px);
   grid-template-rows: auto;
@@ -35,9 +40,9 @@ main > section:first-child > h2 {
 }
 
 #ingredients > input {
+  place-self: center;
   border: 0px;
   font-size: 13px;
-  place-self: center;
   width: 150px;
 }
 
@@ -45,45 +50,52 @@ main > section:first-child > h2 {
   outline: none;
 }
 
-.buttonOn {
+.buttonOn { /* ingredient button clicked */
   background-color: lightskyblue;
   color: white;
 }
 
-.buttonOff {
+.buttonOff { /* ingredient button unclicked */
   background-color: white;
-  color: #00a3cc;
+  color: #114B5F;
+  font-size: 15px;
 }
 
 
-main > section:last-child {
-  background-color: lightgoldenrodyellow;
+/*RECIPE CARD STYLING*/
+
+main > section:last-child { /* recipe container*/
+  background-color:  #7e7f9a;
   margin: 20px auto;
   padding-bottom: 10px;
   width: 630px;
+  border-radius: 30px;
+
 }
 
-main > section:last-child > h2 {
-  background: lightgoldenrodyellow;
+main > section:last-child > h2 { /* recipe header */
+  background: #7e7f9a;
   position: sticky;
   top: 0;
   font-size: 40px;
   padding: 10px;
   text-align: center;
+  color: rgb(224, 222, 222);
+
 }
 
-/* width 620px */
-#recipes {
+#recipes { /* container */
   margin: auto;
   padding: 0px 5px;
   width: 620px;
 }
 
-/* individual recipe wrap */
-#recipes > div {
-  background-color: white;
+#recipes > div { /* background of individual card*/
+  background-color: #eb9486;
   height: 100px;
   margin-bottom: 10px;
+  overflow: hidden;
+  
 }
 
 /* img wrap width 105px */
@@ -94,10 +106,9 @@ main > section:last-child > h2 {
   margin-right: 5px;
   width: 100px;
 }
-
-/* img width 100px */
-#recipes > div > div:first-child >img {
+#recipes > div > div:first-child >img{
   width : 100px;
+  
 }
 
 /* recipe title + ingredients + fav button wrapper  width 515px */
@@ -142,8 +153,8 @@ main > section:last-child > h2 {
   padding: 2px;
 }
 
-.selectedIngredient {
-  background-color: #00ccff;
+.selectedIngredient { /*HIGHTLIGHTS INGREDIENT IN RECIPE*/
+  background-color: #35df6d;
   color: black;
   font-weight: bold;
 }
@@ -155,7 +166,7 @@ main > section:last-child > h2 {
 
 #formVis{
   /* DO NOT CHANGE THE SIZES HERE */
-  background-color: gray;
+  background-color: rgb(122, 121, 119);
   padding: 20px;
   left: 0;
   right: 0;
@@ -164,8 +175,4 @@ main > section:last-child > h2 {
   width: 550px;
   height: 80PX;
   z-index: 1; 
-}
-
-#formInvis{
-  display: none;
 }
