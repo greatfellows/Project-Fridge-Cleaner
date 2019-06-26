@@ -29,22 +29,33 @@ function submitLogin() {
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
 
-  //check if password entered matches password stored
-  // if user already exists
-  if (allUsersData[username]) {
+  // check if user filled out both test fields
+  var userEntryOk = true;
+  if (username.length === 0 || password.length === 0) {
+    alert('Sorry, User Name and Password need to both be filled out');
+    userEntryOk = false;
+  }
 
-    // if user password matches - call login
-    if (password === allUsersData[username].password) {
+  if (userEntryOk) {
+    //check if password entered matches password stored
+    // if user already exists and user filled out User Name field
+    if (allUsersData[username]) {
+
+      // if user password matches - call login
+      if (password === allUsersData[username].password) {
+        handleLogin(username, password);
+
+        //if user password doesn't match alert message
+      } else {
+        alert('Sorry, the password you entered does not match password for user ' + username);
+      }
+
+      // if user doesn't exist - call login
+    } else {
+
       handleLogin(username, password);
 
-      //if user password doesn't match alert message
-    } else {
-      alert('Sorry, the password you entered does not match password for user ' + username);
     }
-
-    // if user doesn't exist - call login
-  } else {
-    handleLogin(username, password);
   }
 
   // make login form invisible again
