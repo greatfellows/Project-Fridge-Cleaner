@@ -12,8 +12,7 @@ main > section:first-child {
   border-radius: 10px;
   border: 5px solid white;
   background-color: rgb(226,245,250);
-  height: 500px;
-  margin: 20px auto;
+  margin: 10px auto;
   overflow: auto;
   width: 620px;
 }
@@ -26,7 +25,6 @@ main > section:first-child > h2 { /* ingredients header */
   top: 0;
   text-align: center;
   color: rgb(224, 222, 222);
-
 }
 
 #ingredients { 
@@ -34,7 +32,7 @@ main > section:first-child > h2 { /* ingredients header */
   grid-template-columns: repeat(4, 150px);
   grid-template-rows: auto;
   grid-gap: 2px;
-  margin: 10px auto;
+  margin: 5px auto 5px auto;
   width: 606px;
   justify-content: center;
 }
@@ -65,9 +63,8 @@ main > section:first-child > h2 { /* ingredients header */
 /*RECIPE CARD STYLING*/
 
 main > section:last-child { /* recipe container*/
-  background-color:  #5a46a1;
-  margin: 20px auto;
-  padding-bottom: 10px;
+  background-color:  #7e7f9a;
+  margin: 10px auto;
   width: 630px;
   border-radius: 10px;
 
@@ -81,7 +78,6 @@ main > section:last-child > h2 { /* recipe header */
   padding: 10px;
   text-align: center;
   color: rgb(224, 222, 222);
-
 }
 
 #recipes { /* container */
@@ -93,23 +89,19 @@ main > section:last-child > h2 { /* recipe header */
 #recipes > div { /* background of individual card*/
   background-color: #9497f0d0;
   height: 100px;
-  margin-bottom: 10px;
-  overflow: hidden;
-  border-radius: 10px;
-  
+  margin-bottom: 10px; 
 }
 
 /* img wrap width 105px */
 #recipes > div > div:first-child {
   float: left;
-  height: 100px;
-  object-fit: contain;
   margin-right: 5px;
-  width: 100px;
 }
-#recipes > div > div:first-child >img{
-  width : 100px;
-  
+
+#recipes > div > div:first-child > img {
+  object-fit: cover;
+  width:100px;
+  height:100px;
 }
 
 /* recipe title + ingredients + fav button wrapper  width 515px */
@@ -181,5 +173,4 @@ main > section:last-child > h2 { /* recipe header */
 
 ::-webkit-scrollbar{
   width: 0px;
-  
 }

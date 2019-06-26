@@ -6,21 +6,33 @@ html{
   font-family: Arial, Helvetica, sans-serif;
 }
 
-head{
-
-}
-
 body {
   margin: auto;
   width: 1280px;
-
 }
 
-body > input {
+header {
+  position: relative;
+  width: 1280px;
+}
+
+#loginDiv {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+#loginDiv > h4 {
+  color: white;
+  font-size: 35px;
+  display: inline-block;
+}
+
+#loginDiv > input {
   color: black;
+  display: inline-block;
   font-size: 15px;
   margin: 5px 0px;
-  float: right;
 }
 
 header {
@@ -28,27 +40,28 @@ header {
   margin: auto;
   width: 1280px;
   overflow: auto;
-  }
+}
 
-header > div {
+header > div:last-child {
+  width: 1280px;
   float: left;
 }
 
-header > div > img {
+header > div:last-child > img {
   float: left;
   margin-right: 20px;
 }
 
-header > div > div {
+header > div:last-child > div {
   float: left;
   margin: 20px 0px;
 }
 
-header > div > div > h1 {
+header > div:last-child > div > h1 {
   font-size: 75px;
 }
 
-header > div > div > h4 {
+header > div:last-child > div > h4 {
   font-size: 20px;
   margin-top: 10px;
 }
@@ -64,20 +77,18 @@ nav li{
   margin: 30px 50px 30px 0px;
   padding: 30px 0px;
 }
+
 main > section {
   margin: 20px auto;
-  width: 1024px;
+  /* width: 1024px; */
   height: 530px;
   overflow: auto;
-  padding-bottom: 10px;
 }
-
 
 a {
   text-decoration: none;
   
 }
-
 a:visited {
   text-decoration: none;
 }
