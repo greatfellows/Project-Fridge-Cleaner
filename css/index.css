@@ -69,7 +69,7 @@ main > section:last-child { /* recipe container*/
   margin: 20px auto;
   padding-bottom: 10px;
   width: 630px;
-  border-radius: 30px;
+  border-radius: 10px;
 
 }
 
@@ -175,4 +175,9 @@ main > section:last-child > h2 { /* recipe header */
   width: 550px;
   height: 80PX;
   z-index: 1; 
+}
+
+::-webkit-scrollbar{
+  width: 0px;
+  
 }
