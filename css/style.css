@@ -14,25 +14,25 @@ header {
   overflow: auto;
 }
 
-header > div {
+header > div:last-child {
   float: left;
 }
 
-header > div > img {
+header > div:last-child > img {
   float: left;
   margin-right: 20px;
 }
 
-header > div > div {
+header > div:last-child > div {
   float: left;
   margin: 20px 0px;
 }
 
-header > div > div > h1 {
+header > div:last-child > div > h1 {
   font-size: 75px;
 }
 
-header > div > div > h4 {
+header > div:last-child > div > h4 {
   font-size: 20px;
   margin-top: 10px;
 }
