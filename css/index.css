@@ -71,7 +71,7 @@ main > section:last-child { /* recipe container*/
 }
 
 main > section:last-child > h2 { /* recipe header */
-  background: #7e7f9a;
+  background: #5a46a1;
   position: sticky;
   top: 0;
   font-size: 40px;
@@ -87,7 +87,7 @@ main > section:last-child > h2 { /* recipe header */
 }
 
 #recipes > div { /* background of individual card*/
-  background-color: #8050cea1;
+  background-color: #9497f0d0;
   height: 100px;
   margin-bottom: 10px; 
 }
@@ -121,6 +121,7 @@ main > section:last-child > h2 { /* recipe header */
 /* fav button width 25px */
 #recipes > div > div:nth-child(2) > div > img {
   width: 25px;
+  border-radius: 13px;
 }
 
 /* recipe title width 490px */
