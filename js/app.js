@@ -5,17 +5,9 @@
 // all unique ingredients list
 var allIngredients = [];
 
-// all users data object to push to Local storage
-var allUsersData = {};
-var allUsersKey = 'allUsersKey';
-var userNameKey = 'userNameKey';
-
-
 // all currently user selected ingredients
 var selectedIngredients = {};
 
-// current user UserName
-var currentUserName;
 
 // not used yet. potentially used for recipe sorting method
 var sortRecipesBy = 'ingredients';
@@ -78,22 +70,6 @@ function handleLogout() {
   renderAll();
 }
 
-function retrieveLocalStorage() {
-
-  var dataRetrieved = localStorage.getItem(allUsersKey);
-  //  if data exists
-  if (dataRetrieved) {
-    var dataParsed = JSON.parse(dataRetrieved);
-    allUsersData = dataParsed;
-  }
-
-  var storedUserName = localStorage.getItem(userNameKey);
-  //  if there is a stored current user name log them in
-  if (storedUserName) {
-    currentUserName = storedUserName;
-    handleLogin(currentUserName);
-  }
-}
 
 function saveToLocalStorage() {
 
@@ -312,6 +288,11 @@ function onPageLoad() {
   buildIngredientArrays();
   // retrieve local storage
   retrieveLocalStorage();
+
+  // if there is a current user log in as current user
+  if (currentUserName) {
+    handleLogin(currentUserName);
+  }
   //set local current user data to retrieved data
   loadCurrentUsersData();
   renderAll();

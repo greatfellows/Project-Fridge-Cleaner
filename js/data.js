@@ -1,5 +1,6 @@
 'use strict';
 
+// ------------ VARIABLES (DATA) ------------
 
 // recipeBook array of recipes
 var recipeBook = [
@@ -113,4 +114,31 @@ var recipeBook = [
 var favoriteRecipes = [];
 
 
+// all users data object to push to Local storage
+var allUsersData = {};
+var allUsersKey = 'allUsersKey';
+var userNameKey = 'userNameKey';
 
+// current user UserName
+var currentUserName;
+
+
+// ------------ FUNCTIONS ------------
+
+function retrieveLocalStorage() {
+
+  var dataRetrieved = localStorage.getItem(allUsersKey);
+  //  if data exists
+  if (dataRetrieved) {
+    var dataParsed = JSON.parse(dataRetrieved);
+    allUsersData = dataParsed;
+  }
+
+  var storedUserName = localStorage.getItem(userNameKey);
+  //  if there is a stored current user name log them in
+  if (storedUserName) {
+    currentUserName = storedUserName;
+  }
+}
+
+retrieveLocalStorage();
