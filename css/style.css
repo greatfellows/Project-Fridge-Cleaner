@@ -1,18 +1,34 @@
-html {
-  background-color: black;
+html{
+  background-image: url(https://images.unsplash.com/photo-1517757910079-f57fd7f49a91?ixlib=rb-1.2.1&w=1000&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #114B5F;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+head{
+
 }
 
 body {
   margin: auto;
   width: 1280px;
+
+}
+
+body > input {
+  color: black;
+  font-size: 15px;
+  margin: 5px 0px;
+  float: right;
 }
 
 header {
-  background-color: lightgoldenrodyellow;
+  background-color:#456990;
   margin: auto;
   width: 1280px;
   overflow: auto;
-}
+  }
 
 header > div {
   float: left;
@@ -48,9 +64,18 @@ nav li{
   margin: 30px 50px 30px 0px;
   padding: 30px 0px;
 }
+main > section {
+  margin: 20px auto;
+  width: 1024px;
+  height: 530px;
+  overflow: auto;
+  padding-bottom: 10px;
+}
+
 
 a {
   text-decoration: none;
+  
 }
 
 a:visited {

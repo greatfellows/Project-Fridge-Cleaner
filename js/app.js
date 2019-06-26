@@ -182,8 +182,8 @@ function renderRecipes() {
     }
 
     // add element content
-    h3Element.textContent = `${recipeBook[i].name} (${recipeBook[i].ingredientsOnHand} Ingredients on Hand) ${recipeBook[i].category}`;
-    imageElement.src = 'https://via.placeholder.com/150';
+    h3Element.textContent = `${recipeBook[i].name} ( ${recipeBook[i].ingredientsOnHand} )`;
+    imageElement.src = recipeBook[i].image;
 
     //if recipe is already in favorite recipes, assign .liked
     if (favoriteRecipes.includes(recipeBook[i].name)) {
