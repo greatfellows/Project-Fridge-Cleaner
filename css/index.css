@@ -19,7 +19,7 @@ main > section:first-child {
 }
 
 main > section:first-child > h2 { /* ingredients header */
-  background-color:#07596dce;
+  background-color:#114B5F;
   font-size: 40px;
   padding: 10px 0px;
   position: sticky;
@@ -40,9 +40,9 @@ main > section:first-child > h2 { /* ingredients header */
 }
 
 #ingredients > input {
+  place-self: center;
   border: 0px;
   font-size: 13px;
-  place-self: center;
   width: 150px;
 }
 
@@ -57,7 +57,7 @@ main > section:first-child > h2 { /* ingredients header */
 
 .buttonOff { /* ingredient button unclicked */
   background-color: white;
-  color: #07596d;
+  color: #114B5F;
   font-size: 15px;
 }
 
@@ -65,14 +65,16 @@ main > section:first-child > h2 { /* ingredients header */
 /*RECIPE CARD STYLING*/
 
 main > section:last-child { /* recipe container*/
-  background-color: rgb(213, 173, 112);
+  background-color:  #7e7f9a;
   margin: 20px auto;
   padding-bottom: 10px;
   width: 630px;
+  border-radius: 30px;
+
 }
 
 main > section:last-child > h2 { /* recipe header */
-  background: rgba(213, 173, 112, 0.815);
+  background: #7e7f9a;
   position: sticky;
   top: 0;
   font-size: 40px;
@@ -89,9 +91,11 @@ main > section:last-child > h2 { /* recipe header */
 }
 
 #recipes > div { /* background of individual card*/
-  background-color: rgb(213, 173, 112);
+  background-color: #eb9486;
   height: 100px;
   margin-bottom: 10px;
+  overflow: hidden;
+  
 }
 
 /* img wrap width 105px */
