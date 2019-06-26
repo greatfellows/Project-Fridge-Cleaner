@@ -63,9 +63,11 @@ main > section:first-child > h2 { /* ingredients header */
 /*RECIPE CARD STYLING*/
 
 main > section:last-child { /* recipe container*/
-  background-color:  #7e7f9a;
-  margin: 10px auto;
-  width: 630px;
+  background-color:  white;
+  /* margin: 10px auto; */
+  /* width: 630px; */
+  margin: auto;
+  border: 5px solid white;
   border-radius: 10px;
 
 }
@@ -75,6 +77,7 @@ main > section:last-child > h2 { /* recipe header */
   position: sticky;
   top: 0;
   font-size: 40px;
+  margin-bottom: 5px;
   padding: 10px;
   text-align: center;
   color: rgb(224, 222, 222);
@@ -82,14 +85,14 @@ main > section:last-child > h2 { /* recipe header */
 
 #recipes { /* container */
   margin: auto;
-  padding: 0px 5px;
   width: 620px;
 }
 
 #recipes > div { /* background of individual card*/
+  border-radius: 0px 11.5px 0px 0px;
   background-color: #9497f0d0;
   height: 100px;
-  margin-bottom: 10px; 
+  margin-bottom: 5px; 
 }
 
 /* img wrap width 105px */
@@ -112,9 +115,9 @@ main > section:last-child > h2 { /* recipe header */
 
 /* fav button wrapper width 25px */
 #recipes > div > div:nth-child(2) > div {
-  object-fit: contain;
   float: right;
   height: 25px;
+  object-fit: contain;
   width: 25px;
 }
 
@@ -145,11 +148,13 @@ main > section:last-child > h2 { /* recipe header */
   font-size: 13px;
   display: inline-block;
   padding: 2px;
+  margin: 1px;
 }
 
 .selectedIngredient { /*HIGHTLIGHTS INGREDIENT IN RECIPE*/
-  background-color: #35df6d;
-  color: black;
+  border-radius: 5px;
+  background-color: #d135df;
+  color: white;
   font-weight: bold;
 }
 
