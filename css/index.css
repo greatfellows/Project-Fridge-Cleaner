@@ -19,7 +19,7 @@ main > section:first-child {
 }
 
 main > section:first-child > h2 { /* ingredients header */
-  background-color:#07596d;
+  background-color:#07596dce;
   font-size: 40px;
   padding: 10px 0px;
   position: sticky;
@@ -72,7 +72,7 @@ main > section:last-child { /* recipe container*/
 }
 
 main > section:last-child > h2 { /* recipe header */
-  background: rgb(122, 121, 119);
+  background: rgba(213, 173, 112, 0.815);
   position: sticky;
   top: 0;
   font-size: 40px;
