@@ -40,7 +40,7 @@ main > section:first-child > h2 { /* ingredients header */
 }
 
 #ingredients > input {
-  place-self: center;
+  /* place-self: center; */
   border: 0px;
   font-size: 13px;
   width: 150px;
@@ -91,7 +91,7 @@ main > section:last-child > h2 { /* recipe header */
 }
 
 #recipes > div { /* background of individual card*/
-  background-color: #eb9486;
+  background-color: #8050cea1;
   height: 100px;
   margin-bottom: 10px;
   overflow: hidden;
