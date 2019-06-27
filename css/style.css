@@ -1,20 +1,29 @@
 html{
+  /* background-image: url(https://images.unsplash.com/photo-1517757910079-f57fd7f49a91?ixlib=rb-1.2.1&w=1000&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #114B5F; */
+  font-family: Arial, Helvetica, sans-serif;
+  /* padding-top: 10px; */
+}
+
+body {
   background-image: url(https://images.unsplash.com/photo-1517757910079-f57fd7f49a91?ixlib=rb-1.2.1&w=1000&q=80);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #114B5F;
-  font-family: Arial, Helvetica, sans-serif;
-  padding-top: 10px;
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
 }
 
-body {
-  margin: auto;
-  width: 1280px;
-}
 
 header {
   position: relative;
   width: 1280px;
+  background-color:#456990;
+  margin: auto;
+  overflow: auto;
 }
 
 #loginDiv {
@@ -37,21 +46,17 @@ header {
   margin: 5px 0px;
 }
 
-header {
-  background-color:#456990;
-  margin: auto;
-  width: 1280px;
-  overflow: auto;
-}
-
 header > div:last-child {
   width: 1280px;
   float: left;
 }
 
-header > div:last-child > img {
+#logo {
   float: left;
-  margin-right: 20px;
+  height: auto;
+  margin: 10px;
+  object-fit: contain;
+  width: 120px;
 }
 
 header > div:last-child > div {
@@ -78,6 +83,10 @@ nav li{
   font-size: 30px;
   margin: 30px 50px 30px 0px;
   padding: 30px 0px;
+}
+
+main {
+  margin:auto;
 }
 
 main > section {

@@ -2,12 +2,6 @@
 /*FOR STYLING, PLEASE SEE STYLES.CSS EVERYTHING ON INDEX.CSS IS ABOUT THE CONTAINER OR THE INFORMATION INSIDE OF STATED CONTAINER*/
 /*INGREDIENT GRID STYLING*/
 
-#logo{
-  margin: 10px;
-  height: 150px;
-  width: auto;
-}
-
 main {
   display: grid;
   width: 1280px;
@@ -15,6 +9,9 @@ main {
   grid-template-columns: 630px 630px
 }
 
+main > section {
+  
+}
 
 main > section:first-child {
   border-radius: 10px;
@@ -72,9 +69,8 @@ main > section:first-child > h2 { /* ingredients header */
 
 main > section:last-child { /* recipe container*/
   background-color:  white;
-  /* margin: 10px auto; */
-  /* width: 630px; */
-  margin: auto;
+  width: 620px;
+  margin: 10px auto;
   border: 5px solid white;
   border-radius: 10px;
 
