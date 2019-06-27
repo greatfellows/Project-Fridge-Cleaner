@@ -1,12 +1,14 @@
+#hello{
+  background-color: black;
+  color: white;
+  text-align: center;
+  height:50px;
+  width:1000px;
+  font-size: 50px;
+  margin:20px auto;
+  padding:25px;
 
-
-
-h3{
-    color: white;
-    font-size: 50px;
-    padding: 20px;
-  }
-
+}
   
   nav {
     height: 150px;
@@ -22,7 +24,43 @@ h3{
 
 h2{
       text-align: center;
-      color : black;
+      color :white;
+      background-color: black;
       font-size: 50px;
       padding: 20px;
+      width: 800px;
+      margin:20px auto;
+      padding:25px;
+  }
+  #userSection{
+    background-color:#114b5f;
+    height:auto;
+    font-size: 20px;
+  }
+  #userRecipes li {
+    font-size: 13px;
+    display: inline-block;
+    padding: 2px;
+  }
+  #userRecipes ul {
+    float: left;
+    height: 65px;
+    overflow: auto;
+    padding-bottom: 10px;
+    width: 490px;
+
+  }
+  #userRecipes h3 {
+    display: inline-block;
+    font-size: 20px;
+    height: 20px;
+    padding: 2.5px 0px;
+    width: 490px;
+  }
+  
+  body> main>section> div > div > img{
+    width: 200px;
+    height:200px;
+   display:inline-block;
+    padding: 30px;
   }

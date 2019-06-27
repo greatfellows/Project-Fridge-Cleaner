@@ -39,7 +39,7 @@ var renderFavRecipes = function(){
         ulElement.appendChild(liElement);
       }
       title.textContent = recipeBook[i].name;
-      imageElement.src = 'https://via.placeholder.com/150';
+      imageElement.src = recipeBook[i].image;
       liElement.textContent = recipeBook[i].ingredients[j];
       favRecDiv.appendChild(imageElement);
       favRecDiv.appendChild(title);
