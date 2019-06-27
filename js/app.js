@@ -9,10 +9,6 @@ var allIngredients = [];
 var selectedIngredients = {};
 
 
-// not used yet. potentially used for recipe sorting method
-var sortRecipesBy = 'ingredients';
-
-
 // ------------ FUNCTIONS (User related) ------------
 
 function User(userName, password, userIngredients, userRecipes) {
@@ -31,7 +27,7 @@ function handleLogin(userName, password) {
   loginButton.value = 'Sign Out';
 
   // render current user name to top of screen
-  loginButton.parentNode.firstChild.textContent = currentUserName;
+  loginButton.parentNode.firstElementChild.textContent = `Welcome, ${userName}`;
 
   // check if user already exists login
   if (allUsersData[userName]) {
@@ -54,7 +50,7 @@ function handleLogout() {
   loginButton.value = 'Sign In';
 
   // clear current username on top of screen
-  loginButton.parentNode.firstChild.textContent = '    ';
+  loginButton.parentNode.firstElementChild.textContent = 'Click to login!';
 
   // save to local storage
   saveToLocalStorage();
@@ -98,10 +94,13 @@ function buildIngredientArrays() {
       }
     }
   }
+  sortIngredientsAlphabetically();
 }
 
 // render ingredients table
 function renderIngredientsTable() {
+  // TODO sort ingredients alphabetically
+  // sortIngredientsAlphabetically();
   //get ingredients section
   var ingredientsDiv = document.getElementById('ingredients');
   //clear ingredients section
@@ -130,17 +129,16 @@ function sortRecipeBookByIngredients() {
 }
 
 // TODO make function
-function sortRecipeBookByCategory() {
-  recipeBook.sort(function (a, b) {
-    var nameA = a.category.toUpperCase();
-    var nameB = b.category.toUpperCase();
+function sortIngredientsAlphabetically() {
+  allIngredients.sort(function (a, b) {
+    var nameA = a.toUpperCase();
+    var nameB = b.toUpperCase();
     if (nameA < nameB) {
       return -1;
     }
     if (nameA > nameB) {
       return 1;
     }
-
     // names must be equal
     return 0;
   });
@@ -277,7 +275,9 @@ function loadCurrentUsersData() {
     // loop through recipe book and adjust ingredients on hand up by 1 for all selected ingredients
     var keys = Object.keys(selectedIngredients);
     for (var i = 0; i < keys.length; i++) {
-      changeIngredientsOnHand(keys[i], 1);
+      if (selectedIngredients[keys[i]] === 1) {
+        changeIngredientsOnHand(keys[i], 1);
+      }
     }
     favoriteRecipes = allUsersData[currentUserName].userRecipes;
   }
@@ -310,14 +310,6 @@ function renderAll() {
 
 onPageLoad();
 
-
-// test calls
-// handleLogin('TEMP USER', 'ADMIN PASSWORD');
-// handleLogout();
-// handleLogin('TEMP USER2', 'ADMIN PASSWORD');
-// handleLogin('TEMP USER', 'ADMIN PASSWORD');
-// handleLogin('Benjamin', 'ADMIN PASSWORD');
-// saveToLocalStorage();
 
 
 

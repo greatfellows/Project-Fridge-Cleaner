@@ -8,7 +8,19 @@
   margin:20px auto;
   padding:25px;
 
+#logo{
+  margin: 10px;
+  height: 150px;
+  width: auto;
 }
+
+
+h3{
+    color: white;
+    font-size: 50px;
+    padding: 20px;
+  }
+
   
   nav {
     height: 150px;
