@@ -31,6 +31,13 @@ put selected ingredients into an array, which we will iterate over to find ingre
 -fixed recipies to stay sticky at the top of our div
 -buttons are buttons but don't effect JS
 
+//Update Tuesday://
+-created log in form w/ hiding attributes
+-created fav button
+-created user page to display favorite recipes
+-created 'local storage functions' that store username, password, favorites, and current ingredients. 
+-first live deployment.
+
 
 *========================================================*
 

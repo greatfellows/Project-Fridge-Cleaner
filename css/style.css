@@ -1,5 +1,10 @@
-html {
-  background-color: black;
+html{
+  background-image: url(https://images.unsplash.com/photo-1517757910079-f57fd7f49a91?ixlib=rb-1.2.1&w=1000&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #114B5F;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 10px;
 }
 
 body {
@@ -7,41 +12,58 @@ body {
   width: 1280px;
 }
 
-body > input {
+header {
+  position: relative;
+  width: 1280px;
+}
+
+#loginDiv {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+#loginDiv > h4 {
+  color: white;
+  display: inline-block;
+  font-size: 15px;
+  /* padding-top: 4px; */
+}
+
+#loginDiv > input {
   color: black;
+  display: inline-block;
   font-size: 15px;
   margin: 5px 0px;
-  /* padding: 10px 0px; */
-  float: right;
 }
 
 header {
-  background-color: lightgoldenrodyellow;
+  background-color:#456990;
   margin: auto;
   width: 1280px;
   overflow: auto;
 }
 
-
-header > div {
+header > div:last-child {
+  width: 1280px;
   float: left;
 }
 
-header > div > img {
+header > div:last-child > img {
   float: left;
   margin-right: 20px;
 }
 
-header > div > div {
+header > div:last-child > div {
   float: left;
   margin: 20px 0px;
 }
 
-header > div > div > h1 {
+header > div:last-child > div > h1 {
   font-size: 75px;
 }
 
-header > div > div > h4 {
+header > div:last-child > div > h4 {
   font-size: 20px;
   margin-top: 10px;
 }
@@ -58,10 +80,17 @@ nav li{
   padding: 30px 0px;
 }
 
-a {
-  text-decoration: none;
+main > section {
+  margin: 20px auto;
+  /* width: 1024px; */
+  height: 530px;
+  overflow: auto;
 }
 
+a {
+  text-decoration: none;
+  
+}
 a:visited {
   text-decoration: none;
 }
@@ -69,3 +98,4 @@ a:visited {
 footer {
   color: white;
 }
+

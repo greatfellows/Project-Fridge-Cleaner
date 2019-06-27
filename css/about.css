@@ -1,13 +1,18 @@
+#logo{
+    margin: 10px;
+    height: 150px;
+    width: auto;
+  }
+
 body{
 
 }
 section{
-    background-color: blanchedalmond;
-    color: black;
+    background-color: #68317e;
+    color: rgb(255, 253, 253);
     margin: 10px;
     padding: 10px;
     /* float: left; */
-    width: 960px;
     height: auto;
     overflow: auto;
 
@@ -19,12 +24,37 @@ section > div:first-child{
     border: 5px solid black;
     
 }
-img{
+section > div > img{
+    height: 300px;
+    width: auto;
 
 }
-#person{
+#Benjamin{
+    
     font-size: 35px;
     color: black;
     margin: 10px;
     padding-left: 10px;
+    height: 100px;
+}
+#Eric{
+    font-size: 35px;
+    color: black;
+    margin: 10px;
+    padding-left: 10px;
+    height: 100px;
+}
+#Hanna{
+    font-size: 35px;
+    color: black;
+    margin: 10px;
+    padding-left: 10px;
+    height: 100px;
+}
+#Elle{
+    font-size: 35px;
+    color: black;
+    margin: 10px;
+    padding-left: 10px;
+    height: 100px;
 }
