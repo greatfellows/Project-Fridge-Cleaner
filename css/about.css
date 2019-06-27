@@ -1,8 +1,4 @@
-#logo{
-    margin: 10px;
-    height: 150px;
-    width: auto;
-  }
+
  
 
 section > div > img{
@@ -11,7 +7,14 @@ section > div > img{
     
 
 }
-
+h1 { 
+    font-size: 40px;
+}
+p {
+    
+    font-size: 20px;
+    color: black;
+}
 
 #icon{
     border-radius: 200px;
@@ -20,14 +23,22 @@ section > div > img{
     /* display: inline-block; */
 
 }
+#Benjamin{
+    float: left;
+}
+#Hanna{
+    float: right;
+}
+#Elle{
+    float: left;
+}
+#Eric{
+    float: right;
+}
 
 #description{
     padding: 5px;  
-    justify-content: center;
-    inset-inline: ;  
     font-size: 30px;
-    background-color: #7b60866b;
-    color: wheat;
 }
 
 
@@ -37,6 +48,9 @@ section > div > img{
     /* display: grid   ; */
     perspective: 1000px;
     margin: auto;
+    /* display: flex;  
+    flex-wrap: wrap; */
+    justify-content: center;
     
 }
 	/* flip the pane when hovered */
@@ -75,7 +89,7 @@ section > div > img{
 /* back, initially hidden pane */
 .back {
     transform: rotateY(180deg);
-    background-color: #68317e;
+  
 
 }
 
