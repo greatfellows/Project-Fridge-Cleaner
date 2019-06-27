@@ -275,7 +275,9 @@ function loadCurrentUsersData() {
     // loop through recipe book and adjust ingredients on hand up by 1 for all selected ingredients
     var keys = Object.keys(selectedIngredients);
     for (var i = 0; i < keys.length; i++) {
-      changeIngredientsOnHand(keys[i], 1);
+      if (selectedIngredients[keys[i]] === 1) {
+        changeIngredientsOnHand(keys[i], 1);
+      }
     }
     favoriteRecipes = allUsersData[currentUserName].userRecipes;
   }
