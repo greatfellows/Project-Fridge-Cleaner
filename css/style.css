@@ -7,16 +7,18 @@ html{
   padding-top: 10px;
 }
 
+#logo{
+  margin: 10px;
+  height: 150px;
+  width: auto;
+}
+
 body {
   margin: auto;
   width: 1280px;
 }
 
-header {
-  position: relative;
-  width: 1280px;
-  border-radius: 10px;
-}
+
 
 #loginDiv {
   position: absolute;
@@ -43,6 +45,9 @@ header {
   margin: auto;
   width: 1280px;
   overflow: auto;
+  position: relative;
+  border-radius: 10px;
+  
 }
 
 header > div:last-child {
