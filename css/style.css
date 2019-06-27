@@ -1,10 +1,14 @@
+/* font-family: 'Cuprum', sans-serif;
+font-family: 'Satisfy', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Cookie', cursive;
+font-family: 'Just Another Hand', cursive;
+font-family: 'Fredericka the Great', cursive; 
+<link href="https://fonts.googleapis.com/css?family=Caveat|Cookie|Cuprum|Fredericka+the+Great|Just+Another+Hand|Satisfy&display=swap" rel="stylesheet">
+*/
+
 html{
-  /* background: radial-gradient(circle, rgb(231, 213, 213), #456990); */
-  /* background-repeat: no-repeat;
-  background-size: cover; */
-  background-color: rgb(237, 243, 245);
   font-family: Arial, Helvetica, sans-serif;
-  padding-top: 10px;
 }
 
 #logo{
@@ -14,11 +18,25 @@ html{
 }
 
 body {
-  margin: auto;
-  width: 1280px;
+  background-image: url(https://images.unsplash.com/photo-1517757910079-f57fd7f49a91?ixlib=rb-1.2.1&w=1000&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #114B5F;
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
 }
 
 
+header {
+  position: relative;
+  width: 1280px;
+  background-color:#17191b;
+  margin: auto;
+  overflow: auto;
+  color: white;
+  border-radius: 10px;
+}
 
 #loginDiv {
   position: absolute;
@@ -40,24 +58,17 @@ body {
   margin: 5px 0px;
 }
 
-header {
-  background-color:#456990;
-  margin: auto;
-  width: 1280px;
-  overflow: auto;
-  position: relative;
-  border-radius: 10px;
-  
-}
-
 header > div:last-child {
   width: 1280px;
   float: left;
 }
 
-header > div:last-child > img {
+#logo {
   float: left;
-  margin-right: 20px;
+  height: auto;
+  margin: 10px;
+  object-fit: contain;
+  width: 120px;
 }
 
 header > div:last-child > div {
@@ -66,11 +77,14 @@ header > div:last-child > div {
 }
 
 header > div:last-child > div > h1 {
-  font-size: 75px;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 60px;
 }
 
 header > div:last-child > div > h4 {
-  font-size: 20px;
+  font-family: 'Cookie';
+  font-style: italic;
+  font-size: 30px;
   margin-top: 10px;
 }
 
@@ -81,9 +95,14 @@ nav {
 
 nav li{
   display: inline-block;
+  font-family: 'Cuprum';
   font-size: 30px;
   margin: 30px 50px 30px 0px;
   padding: 30px 0px;
+}
+
+main {
+  margin:auto;
 }
 
 main > section {
@@ -94,10 +113,12 @@ main > section {
 }
 
 a {
+  color: white;
   text-decoration: none;
   
 }
 a:visited {
+  color: white;
   text-decoration: none;
 }
 
