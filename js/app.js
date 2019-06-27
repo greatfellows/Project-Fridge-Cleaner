@@ -27,7 +27,7 @@ function handleLogin(userName, password) {
   loginButton.value = 'Sign Out';
 
   // render current user name to top of screen
-  loginButton.parentNode.firstChild.textContent = currentUserName;
+  loginButton.parentNode.firstElementChild.textContent = `Welcome, ${userName}`;
 
   // check if user already exists login
   if (allUsersData[userName]) {
@@ -50,7 +50,7 @@ function handleLogout() {
   loginButton.value = 'Sign In';
 
   // clear current username on top of screen
-  loginButton.parentNode.firstChild.textContent = '    ';
+  loginButton.parentNode.firstElementChild.textContent = 'Click to login!';
 
   // save to local storage
   saveToLocalStorage();
