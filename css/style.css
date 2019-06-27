@@ -1,8 +1,8 @@
 html{
-  background-image: url(https://images.unsplash.com/photo-1517757910079-f57fd7f49a91?ixlib=rb-1.2.1&w=1000&q=80);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #114B5F;
+  /* background: radial-gradient(circle, rgb(231, 213, 213), #456990); */
+  /* background-repeat: no-repeat;
+  background-size: cover; */
+  background-color: rgb(237, 243, 245);
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 10px;
 }
@@ -15,6 +15,7 @@ body {
 header {
   position: relative;
   width: 1280px;
+  border-radius: 10px;
 }
 
 #loginDiv {
