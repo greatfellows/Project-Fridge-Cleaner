@@ -1,60 +1,119 @@
-#logo{
-    margin: 10px;
-    height: 150px;
-    width: auto;
-  }
 
-body{
+ 
 
-}
-section{
-    background-color: #68317e;
-    color: rgb(255, 253, 253);
-    margin: 10px;
-    padding: 10px;
-    /* float: left; */
-    height: auto;
-    overflow: auto;
-
-}
-section > div:first-child{
-    float: left;
-    padding: 10px;
-    margin-right: 30px;
-    border: 5px solid black;
-    
-}
 section > div > img{
     height: 300px;
     width: auto;
+    
 
 }
-#Benjamin{
-    
-    font-size: 35px;
-    color: black;
-    margin: 10px;
-    padding-left: 10px;
-    height: 100px;
+h1 { 
+    font-size: 40px;
 }
-#Eric{
-    font-size: 35px;
-    color: black;
-    margin: 10px;
-    padding-left: 10px;
-    height: 100px;
+p {
+    
+    font-size: 20px;
+}
+
+#icon{
+    border-radius: 200px;
+    width: auto;
+    height: 320px;
+    /* display: inline-block; */
+
+}
+body > main > section > #Benjamin{
+    /* table-layout: auto; */
+    float: right;
+}
+body > main > section > #Hanna{
+    /* table-layout: auto; */
+    float: right;
+}
+/* #iconDeck{
+    table-layout: fixed;
+}
+
+
+#Benjamin{    
 }
 #Hanna{
-    font-size: 35px;
-    color: black;
-    margin: 10px;
-    padding-left: 10px;
-    height: 100px;
+    float: left;
 }
 #Elle{
-    font-size: 35px;
-    color: black;
-    margin: 10px;
-    padding-left: 10px;
-    height: 100px;
 }
+#Eric{
+    float: left;
+} */
+
+#description{
+    padding: 5px;  
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.651);
+    color: white;
+    width: 960px;
+    margin: auto;
+}
+
+
+/* entire container, keeps perspective */
+
+.flip-container {
+    /* display: grid   ; */
+    perspective: 1000px;
+    /* margin: auto; */
+    /* display: flex;  
+    flex-wrap: wrap; */
+    
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 600px;
+    height: 200px;
+    margin-bottom: 200px;
+    padding-left: 60px;
+
+
+
+    
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 1s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+    left: 0;
+
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+    transform: rotateY(0deg);
+
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+    background-color: rgba(0, 0, 0, 0.651);
+    color: white;
+  
+
+}
+
+
+   

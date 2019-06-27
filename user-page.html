@@ -2,20 +2,22 @@
 <html>
 
 <head>
-    
-  <title>Fridge Cleaner (rename me please)</title>
+
+  <title>What's in your Fridge?</title>
   <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie|Cuprum|EB+Garamond|Fredericka+the+Great|Indie+Flower|Satisfy&display=swap">
   <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/user-page.css" />
+  <link rel="stylesheet" href="./css/my-fridge.css" />
 </head>
 
 <body>
+
   <header>
+    <div>
+      <img id='logo' src="imgs/logo.png" />
       <div>
-          <img id='logo' src="imgs/group logo.png" />
-          <div>
-        <h1>Fridge Cleaner</h1>
-        <h4>What do I make?</h4>
+        <h1>Lazy Chef</h1>
+        <h4>Whip something up</h4>
       </div>
       <nav>
         <ul>
@@ -26,14 +28,19 @@
       </nav>
     </div>
   </header>
+
   <main>
-    <h3 id = "welcome"></h3>
-    <section>
+
+    <div id="hello">
+      <h3 id="welcome"></h3>
+    </div>
+
+    <section id="userSection1">
       <h2>My Ingredients</h2>
       <div id="userIngredients"></div>
     </section>
 
-    <section>
+    <section id="userSection2">
       <h2>My Recipes</h2>
       <div id="userRecipes"></div>
     </section>

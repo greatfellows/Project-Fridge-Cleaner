@@ -2,19 +2,12 @@
 /*FOR STYLING, PLEASE SEE STYLES.CSS EVERYTHING ON INDEX.CSS IS ABOUT THE CONTAINER OR THE INFORMATION INSIDE OF STATED CONTAINER*/
 /*INGREDIENT GRID STYLING*/
 
-#logo{
-  margin: 10px;
-  height: 150px;
-  width: auto;
-}
-
 main {
   display: grid;
   width: 1280px;
   grid-gap: 20px;
   grid-template-columns: 630px 630px
 }
-
 
 main > section:first-child {
   border-radius: 10px;
@@ -27,12 +20,17 @@ main > section:first-child {
 
 main > section:first-child > h2 { /* ingredients header */
   background-color:#114B5F;
+  background-image: url('../imgs/background/ingredients.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Satisfy', cursive;
+  font-weight: bold;
   font-size: 40px;
-  padding: 10px 0px;
-  position: sticky;
-  top: 0;
+  /* height: 40px; */
+  padding: 20px 0px;
   text-align: center;
-  color: rgb(224, 222, 222);
+  text-shadow: 2px 2px black;
+  color: white;
 }
 
 #ingredients { 
@@ -67,40 +65,46 @@ main > section:first-child > h2 { /* ingredients header */
   font-size: 15px;
 }
 
-
 /*RECIPE CARD STYLING*/
 
 main > section:last-child { /* recipe container*/
   background-color:  white;
-  /* margin: 10px auto; */
-  /* width: 630px; */
-  margin: auto;
+  width: 620px;
+  margin: 10px auto;
   border: 5px solid white;
   border-radius: 10px;
 
 }
 
 main > section:last-child > h2 { /* recipe header */
-  background: #5a46a1;
+  background-color: #5a46a1;
+  background-image: url('../imgs/background/porkchophead.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Satisfy', cursive;
+  font-weight: bold;
+  font-size: 40px;
+  padding: 20px 0px;
   position: sticky;
   top: 0;
-  font-size: 40px;
-  margin-bottom: 5px;
-  padding: 10px;
   text-align: center;
-  color: rgb(224, 222, 222);
+  text-shadow: 2px 2px black;
+  color: white;
 }
 
 #recipes { /* container */
-  margin: auto;
+  background-color: lightblue;
+  margin: 0px auto 0px auto;
+  padding: 5px 0px;
   width: 620px;
 }
 
 #recipes > div { /* background of individual card*/
-  border-radius: 0px 11.5px 0px 0px;
-  background-color: #9497f0d0;
+  /* border-radius: 0px 11.5px 0px 0px; */
+  background-color: white;
   height: 100px;
-  margin-bottom: 5px; 
+  padding: 5px 0px;
+  margin-bottom: 5px;
 }
 
 /* img wrap width 105px */
@@ -138,6 +142,7 @@ main > section:last-child > h2 { /* recipe header */
 /* recipe title width 490px */
 #recipes h3 {
   display: inline-block;
+  font-family: 'EB Garamond', serif;
   font-size: 20px;
   height: 20px;
   padding: 2.5px 0px;
@@ -153,7 +158,8 @@ main > section:last-child > h2 { /* recipe header */
 }
 
 #recipes li {
-  font-size: 13px;
+  font-family: 'EB Garamond', serif;
+  font-size: 15px;
   display: inline-block;
   padding: 2px;
   margin: 1px;
@@ -161,27 +167,9 @@ main > section:last-child > h2 { /* recipe header */
 
 .selectedIngredient { /*HIGHTLIGHTS INGREDIENT IN RECIPE*/
   border-radius: 5px;
-  background-color: #d135df;
+  background-color: #e79417;
   color: white;
   font-weight: bold;
-}
-
-#formInvis{
-  display: none;
-  position: absolute;
-}
-
-#formVis{
-  /* DO NOT CHANGE THE SIZES HERE */
-  background-color: rgb(122, 121, 119);
-  padding: 20px;
-  left: 0;
-  right: 0;
-  position: absolute;
-  margin: 10px auto;
-  width: 550px;
-  height: 80PX;
-  z-index: 1; 
 }
 
 ::-webkit-scrollbar{

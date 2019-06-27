@@ -7,7 +7,7 @@ welcome.textContent = 'Welcome back, ' + userName;
 
 //render users selected ingredients
 var favIngredientsDiv = document.getElementById('userIngredients');
-var renderUserIngredients = function (){
+var renderUserIngredients = function () {
   var userIngredients = allUsersData[currentUserName].userIngredients;
   var keys = Object.keys(userIngredients);
   var ulElement = document.createElement('ul');
@@ -19,12 +19,12 @@ var renderUserIngredients = function (){
   favIngredientsDiv.appendChild(ulElement);
 };
 //render users favorited recipes
-var renderFavRecipes = function(){
+var renderFavRecipes = function () {
 
   var favRecContainer = document.getElementById('userRecipes');
 
   for (var i = 0; i < recipeBook.length; i++) {
-    if(allUsersData[currentUserName].userRecipes.includes(recipeBook[i].name)){
+    if (allUsersData[currentUserName].userRecipes.includes(recipeBook[i].name)) {
 
 
       var favRecDiv = document.createElement('div');
@@ -39,10 +39,9 @@ var renderFavRecipes = function(){
         ulElement.appendChild(liElement);
       }
       title.textContent = recipeBook[i].name;
-      imageElement.src = 'https://via.placeholder.com/150';
-      liElement.textContent = recipeBook[i].ingredients[j];
-      favRecDiv.appendChild(imageElement);
+      imageElement.src = recipeBook[i].image;
       favRecDiv.appendChild(title);
+      favRecDiv.appendChild(imageElement);
       favRecDiv.appendChild(ulElement);
       favRecContainer.appendChild(favRecDiv);
     }
