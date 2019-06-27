@@ -27,7 +27,7 @@ function handleLogin(userName, password) {
   loginButton.value = 'Sign Out';
 
   // render current user name to top of screen
-  loginButton.parentNode.firstChild.textContent = currentUserName;
+  loginButton.parentNode.firstElementChild.textContent = `Welcome, ${userName}`;
 
   // check if user already exists login
   if (allUsersData[userName]) {
@@ -50,7 +50,7 @@ function handleLogout() {
   loginButton.value = 'Sign In';
 
   // clear current username on top of screen
-  loginButton.parentNode.firstChild.textContent = '    ';
+  loginButton.parentNode.firstElementChild.textContent = 'Click to login!';
 
   // save to local storage
   saveToLocalStorage();
@@ -275,7 +275,9 @@ function loadCurrentUsersData() {
     // loop through recipe book and adjust ingredients on hand up by 1 for all selected ingredients
     var keys = Object.keys(selectedIngredients);
     for (var i = 0; i < keys.length; i++) {
-      changeIngredientsOnHand(keys[i], 1);
+      if (selectedIngredients[keys[i]] === 1) {
+        changeIngredientsOnHand(keys[i], 1);
+      }
     }
     favoriteRecipes = allUsersData[currentUserName].userRecipes;
   }
