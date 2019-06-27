@@ -1,6 +1,7 @@
 /* font-family: 'Cuprum', sans-serif;
 font-family: 'Satisfy', cursive;
-font-family: 'Caveat', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'EB Garamond', serif;
 font-family: 'Cookie', cursive;
 font-family: 'Just Another Hand', cursive;
 font-family: 'Fredericka the Great', cursive; 
@@ -10,6 +11,7 @@ font-family: 'Fredericka the Great', cursive;
 
 
 #logo{
+  border-radius: 60px;
   margin: 10px;
   height: 150px;
   width: auto;
@@ -59,6 +61,24 @@ header {
   margin: 5px 0px;
 }
 
+#formInvis{
+  display: none;
+  position: absolute;
+}
+
+#formVis{
+  /* DO NOT CHANGE THE SIZES HERE */
+  background-color: rgb(122, 121, 119);
+  padding: 20px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: 10px auto;
+  width: 550px;
+  height: 80PX;
+  z-index: 1; 
+}
+
 header > div:last-child {
   width: 1280px;
   float: left;
@@ -67,14 +87,14 @@ header > div:last-child {
 #logo {
   float: left;
   height: auto;
-  margin: 10px;
+  margin: 15px;
   object-fit: contain;
   width: 120px;
 }
 
 header > div:last-child > div {
   float: left;
-  margin: 20px 0px;
+  margin: 25px 0px;
 }
 
 header > div:last-child > div > h1 {
@@ -100,6 +120,7 @@ nav li{
   font-size: 30px;
   margin: 30px 50px 30px 0px;
   padding: 30px 0px;
+  text-shadow: 2px 2px black;
 }
 
 main {
