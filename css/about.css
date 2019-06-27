@@ -5,8 +5,8 @@ section{
     margin: 10px;
     padding: 10px;
     /* float: left; */
-    height: auto;
     overflow: auto;
+    width: 590px;
 
 }
 section > div:first-child{

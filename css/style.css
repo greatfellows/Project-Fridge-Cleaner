@@ -1,10 +1,14 @@
+/* font-family: 'Cuprum', sans-serif;
+font-family: 'Satisfy', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Cookie', cursive;
+font-family: 'Just Another Hand', cursive;
+font-family: 'Fredericka the Great', cursive; 
+<link href="https://fonts.googleapis.com/css?family=Caveat|Cookie|Cuprum|Fredericka+the+Great|Just+Another+Hand|Satisfy&display=swap" rel="stylesheet">
+*/
+
 html{
-  /* background-image: url(https://images.unsplash.com/photo-1517757910079-f57fd7f49a91?ixlib=rb-1.2.1&w=1000&q=80);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #114B5F; */
   font-family: Arial, Helvetica, sans-serif;
-  /* padding-top: 10px; */
 }
 
 body {
@@ -21,9 +25,10 @@ body {
 header {
   position: relative;
   width: 1280px;
-  background-color:#456990;
+  background-color:#17191b;
   margin: auto;
   overflow: auto;
+  color: white;
 }
 
 #loginDiv {
@@ -65,11 +70,14 @@ header > div:last-child > div {
 }
 
 header > div:last-child > div > h1 {
-  font-size: 75px;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 60px;
 }
 
 header > div:last-child > div > h4 {
-  font-size: 20px;
+  font-family: 'Cookie';
+  font-style: italic;
+  font-size: 30px;
   margin-top: 10px;
 }
 
@@ -80,6 +88,7 @@ nav {
 
 nav li{
   display: inline-block;
+  font-family: 'Cuprum';
   font-size: 30px;
   margin: 30px 50px 30px 0px;
   padding: 30px 0px;
@@ -97,10 +106,12 @@ main > section {
 }
 
 a {
+  color: white;
   text-decoration: none;
   
 }
 a:visited {
+  color: white;
   text-decoration: none;
 }
 
