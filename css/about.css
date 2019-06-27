@@ -13,32 +13,46 @@ h1 {
 p {
     
     font-size: 20px;
-    color: black;
 }
 
 #icon{
     border-radius: 200px;
     width: auto;
-    height: 175px;
+    height: 320px;
     /* display: inline-block; */
 
 }
-#Benjamin{
-    float: left;
+body > main > section > #Benjamin{
+    /* table-layout: auto; */
+    float: right;
+}
+body > main > section > #Hanna{
+    /* table-layout: auto; */
+    float: right;
+}
+/* #iconDeck{
+    table-layout: fixed;
+}
+
+
+#Benjamin{    
 }
 #Hanna{
-    float: right;
-}
-#Elle{
     float: left;
 }
-#Eric{
-    float: right;
+#Elle{
 }
+#Eric{
+    float: left;
+} */
 
 #description{
     padding: 5px;  
     font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.651);
+    color: white;
+    width: 960px;
+    margin: auto;
 }
 
 
@@ -47,10 +61,9 @@ p {
 .flip-container {
     /* display: grid   ; */
     perspective: 1000px;
-    margin: auto;
+    /* margin: auto; */
     /* display: flex;  
     flex-wrap: wrap; */
-    justify-content: center;
     
 }
 	/* flip the pane when hovered */
@@ -59,8 +72,13 @@ p {
 	}
 
 .flip-container, .front, .back {
-	width: 320px;
-    height: 175px;
+	width: 600px;
+    height: 200px;
+    margin-bottom: 200px;
+    padding-left: 60px;
+
+
+
     
 }
 
@@ -76,19 +94,23 @@ p {
 	backface-visibility: hidden;
 	position: absolute;
 	top: 0;
-	left: 0;
+    left: 0;
+
 }
 
 /* front pane, placed above back */
 .front {
 	z-index: 2;
 	/* for firefox 31 */
-	transform: rotateY(0deg);
+    transform: rotateY(0deg);
+
 }
 
 /* back, initially hidden pane */
 .back {
     transform: rotateY(180deg);
+    background-color: rgba(0, 0, 0, 0.651);
+    color: white;
   
 
 }
