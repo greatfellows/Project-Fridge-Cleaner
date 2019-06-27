@@ -40,7 +40,6 @@ var renderFavRecipes = function () {
       }
       title.textContent = recipeBook[i].name;
       imageElement.src = recipeBook[i].image;
-      liElement.textContent = recipeBook[i].ingredients[j];
       favRecDiv.appendChild(title);
       favRecDiv.appendChild(imageElement);
       favRecDiv.appendChild(ulElement);
