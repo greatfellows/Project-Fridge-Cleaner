@@ -24,12 +24,16 @@ main > section:first-child {
 
 main > section:first-child > h2 { /* ingredients header */
   background-color:#114B5F;
+  background-image: url('../imgs/background/ingredients.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Satisfy', cursive;
+  font-weight: bold;
   font-size: 40px;
-  padding: 10px 0px;
-  position: sticky;
-  top: 0;
+  /* height: 40px; */
+  padding: 20px 0px;
   text-align: center;
-  color: rgb(224, 222, 222);
+  color: white;
 }
 
 #ingredients { 
@@ -77,18 +81,22 @@ main > section:last-child { /* recipe container*/
 }
 
 main > section:last-child > h2 { /* recipe header */
-  background: #5a46a1;
+  background-color: #5a46a1;
+  background-image: url('../imgs/background/porkchophead.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Satisfy', cursive;
+  font-weight: bold;
+  font-size: 40px;
+  padding: 20px 0px;
   position: sticky;
   top: 0;
-  font-size: 40px;
-  margin-bottom: 5px;
-  padding: 10px;
   text-align: center;
-  color: rgb(224, 222, 222);
+  color: white;
 }
 
 #recipes { /* container */
-  margin: auto;
+  margin: 5px auto 5px auto;
   width: 620px;
 }
 
