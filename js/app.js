@@ -9,10 +9,6 @@ var allIngredients = [];
 var selectedIngredients = {};
 
 
-// not used yet. potentially used for recipe sorting method
-var sortRecipesBy = 'ingredients';
-
-
 // ------------ FUNCTIONS (User related) ------------
 
 function User(userName, password, userIngredients, userRecipes) {
@@ -98,10 +94,13 @@ function buildIngredientArrays() {
       }
     }
   }
+  sortIngredientsAlphabetically();
 }
 
 // render ingredients table
 function renderIngredientsTable() {
+  // TODO sort ingredients alphabetically
+  // sortIngredientsAlphabetically();
   //get ingredients section
   var ingredientsDiv = document.getElementById('ingredients');
   //clear ingredients section
@@ -130,17 +129,16 @@ function sortRecipeBookByIngredients() {
 }
 
 // TODO make function
-function sortRecipeBookByCategory() {
-  recipeBook.sort(function (a, b) {
-    var nameA = a.category.toUpperCase();
-    var nameB = b.category.toUpperCase();
+function sortIngredientsAlphabetically() {
+  allIngredients.sort(function (a, b) {
+    var nameA = a.toUpperCase();
+    var nameB = b.toUpperCase();
     if (nameA < nameB) {
       return -1;
     }
     if (nameA > nameB) {
       return 1;
     }
-
     // names must be equal
     return 0;
   });
@@ -310,14 +308,6 @@ function renderAll() {
 
 onPageLoad();
 
-
-// test calls
-// handleLogin('TEMP USER', 'ADMIN PASSWORD');
-// handleLogout();
-// handleLogin('TEMP USER2', 'ADMIN PASSWORD');
-// handleLogin('TEMP USER', 'ADMIN PASSWORD');
-// handleLogin('Benjamin', 'ADMIN PASSWORD');
-// saveToLocalStorage();
 
 
 
