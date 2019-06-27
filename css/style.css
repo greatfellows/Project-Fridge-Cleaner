@@ -29,6 +29,9 @@ body {
 
 
 header {
+  background-image: url(../imgs/background/darkchocolatehead.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   width: 1280px;
   background-color:#17191b;
