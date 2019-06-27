@@ -29,6 +29,7 @@ header {
   margin: auto;
   overflow: auto;
   color: white;
+  border-radius: 10px;
 }
 
 #loginDiv {

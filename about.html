@@ -2,7 +2,7 @@
 <html>
   <head>
       
-    <title>Fridge Cleaner (rename me please)</title>
+    <title>What's in your Fridge?</title>
     <link rel="stylesheet" href="./css/reset.css"/>
     <link rel="stylesheet" href="./css/style.css"/>
     <link rel="stylesheet" href="./css/about.css"/>
@@ -12,8 +12,8 @@
         <div>
             <img id='logo' src="imgs/group logo.png" />
             <div>
-            <h1>Fridge Cleaner</h1>
-            <h4>What do I make?</h4>
+            <h1>What's in your Fridge?</h1>
+            <h4>What can I make?</h4>
           </div>
           <nav>
             <ul>
@@ -26,45 +26,69 @@
       </header>
     <main>
 
-     <section>
-        <div><img src= 'https://avatars3.githubusercontent.com/u/7322781?s=460&v=4'></div>
-        <div id='Benjamin'>
-          <h1>Benjamin</h1>
-          <p>I have 2 kids and 7 siblings. I also own theDecalGuru.com </p>
-        </div>
-     </section>
+      <div id='description'>
+        <h1>Meet our Dev Team!</h1>
+        <p>This project was a collaborative effort, and not just within this team. Our fellow classmates, TA's, and Jon himself helped to create this application; and we thank you. Here is some information about our main development team. </p>
+      </div>
 
-      <section>
-
-          <div><img src= 'https://avatars3.githubusercontent.com/u/50759222?s=460&v=4'></div>
-          <div id='Eric'>
-            <h1>Eric</h1>
-            <p>I'm 'probably' older than you think I am. </p>
+      <section id='iconDeck'>
+        <div id='Benjamin' class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="front">
+              <img id='icon' src= 'https://avatars3.githubusercontent.com/u/7322781?s=460&v=4'>
           </div>
-      </section>
-
-      <section>
-        <div><img src= 'https://avatars3.githubusercontent.com/u/51218861?s=460&v=4'></div>
-        <div id='Hanna'>
-          <h1>Hanna</h1>
-          <p>I am a former nursing student. I make awesome Ethiopian food. I'm probably younger than you think I am.</p>
+          <div class="back">
+            <h1>Benjamin</h1>
+              <p>I have 2 kids and 7 siblings. I also own theDecalGuru.com</p>
+            </div>
         </div>
-      </section>
+      </div> 
 
-      <section>
-        <div><img src= 'https://avatars1.githubusercontent.com/u/49304668?s=460&v=4'></div>
-        <div id='Elle'>
-          <h1>Elle</h1>
-        
-          <p>I have a dog named Dani Califorinia after the Red Hot Chili Peppers song. I love the color orange, and cookies.</p>
+       <div id='Elle' class='flip-container' ontouchstart= 'this.classList.toggle(hover);'>
+        <div class='flipper'>
+          <div class='front'>
+              <div><img id='icon' src= 'https://avatars1.githubusercontent.com/u/49304668?s=460&v=4'></div>
+          </div>
+          <div class= 'back'>
+              <div id='Elle'>
+                  <h1>Elle</h1>
+               
+                  <p>I have a dog named Dani Califorinia after the Red Hot Chili Peppers song. I love the color orange, and cookies.</p>
+              </div>
+          </div> 
         </div>
-      </section>
+       </div>
 
-     
 
+
+        <div id='Hanna' class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+              <div class="front">
+                  <img id='icon' src= 'https://avatars3.githubusercontent.com/u/51218861?s=460&v=4'>
+              </div>
+              <div class="back">
+                  <p>I am a former nursing student. I make awesome Ethiopian food. I'm probably younger than you think I am.</p>
+                </div>
+            </div>
+          </div> 
+
+          <div id='Eric' class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front">
+                    <img id='icon' src= 'https://avatars3.githubusercontent.com/u/50759222?s=460&v=4'>
+                </div>
+                <div class="back">
+                    I'm 'probably' older than you think I am. 
+                  </div>
+              </div>
+            </div>  
+          </section>  
     </main>
     <footer>
-      
+      Want to see more awesome stuff? Check out these cool apps!
+      <link>
+      <link>
+      <h5>&COPY;Fridge Cleaners 2019</h5>
 
     </footer>
   </body>

@@ -1,52 +1,83 @@
-
-section{
-    background-color: #68317e;
-    color: rgb(255, 253, 253);
+#logo{
     margin: 10px;
-    padding: 10px;
-    /* float: left; */
-    overflow: auto;
-    width: 590px;
+    height: 150px;
+    width: auto;
+  }
+ 
 
-}
-section > div:first-child{
-    float: left;
-    padding: 10px;
-    margin-right: 30px;
-    border: 5px solid black;
-    
-}
 section > div > img{
     height: 300px;
     width: auto;
+    
 
 }
-#Benjamin{
+
+
+#icon{
+    border-radius: 200px;
+    width: auto;
+    height: 175px;
+    /* display: inline-block; */
+
+}
+
+#description{
+    padding: 5px;  
+    justify-content: center;
+    inset-inline: ;  
+    font-size: 30px;
+    background-color: #7b60866b;
+    color: wheat;
+}
+
+
+/* entire container, keeps perspective */
+
+.flip-container {
+    /* display: grid   ; */
+    perspective: 1000px;
+    margin: auto;
     
-    font-size: 35px;
-    color: black;
-    margin: 10px;
-    padding-left: 10px;
-    height: 100px;
 }
-#Eric{
-    font-size: 35px;
-    color: black;
-    margin: 10px;
-    padding-left: 10px;
-    height: 100px;
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+    height: 175px;
+    
 }
-#Hanna{
-    font-size: 35px;
-    color: black;
-    margin: 10px;
-    padding-left: 10px;
-    height: 100px;
+
+/* flip speed goes here */
+.flipper {
+	transition: 1s;
+	transform-style: preserve-3d;
+	position: relative;
 }
-#Elle{
-    font-size: 35px;
-    color: black;
-    margin: 10px;
-    padding-left: 10px;
-    height: 100px;
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+    transform: rotateY(180deg);
+    background-color: #68317e;
+
+}
+
+
+   
