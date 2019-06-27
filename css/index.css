@@ -142,6 +142,7 @@ main > section:last-child > h2 { /* recipe header */
 /* recipe title width 490px */
 #recipes h3 {
   display: inline-block;
+  font-family: 'EB Garamond', serif;
   font-size: 20px;
   height: 20px;
   padding: 2.5px 0px;
@@ -157,7 +158,8 @@ main > section:last-child > h2 { /* recipe header */
 }
 
 #recipes li {
-  font-size: 13px;
+  font-family: 'EB Garamond', serif;
+  font-size: 20px;
   display: inline-block;
   padding: 2px;
   margin: 1px;

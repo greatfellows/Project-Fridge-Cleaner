@@ -1,6 +1,7 @@
 /* font-family: 'Cuprum', sans-serif;
 font-family: 'Satisfy', cursive;
-font-family: 'Caveat', cursive;
+font-family: 'Indie Flower', cursive;
+font-family: 'EB Garamond', serif;
 font-family: 'Cookie', cursive;
 font-family: 'Just Another Hand', cursive;
 font-family: 'Fredericka the Great', cursive; 
@@ -12,6 +13,7 @@ html{
 }
 
 #logo{
+  border-radius: 60px;
   margin: 10px;
   height: 150px;
   width: auto;
@@ -102,6 +104,7 @@ nav li{
   font-size: 30px;
   margin: 30px 50px 30px 0px;
   padding: 30px 0px;
+  font-weight: bold;
 }
 
 main {
