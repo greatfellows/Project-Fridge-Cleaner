@@ -6,7 +6,12 @@ main {
   display: grid;
   width: 1280px;
   grid-gap: 20px;
-  grid-template-columns: 630px 630px
+  grid-template-columns: 630px 630px;
+}
+
+main > section {
+  height: 530px;
+  overflow: auto;
 }
 
 main > section:first-child {
@@ -19,14 +24,12 @@ main > section:first-child {
 }
 
 main > section:first-child > h2 { /* ingredients header */
-  background-color:#114B5F;
   background-image: url('../imgs/background/ingredients.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   font-family: 'Satisfy', cursive;
   font-weight: bold;
   font-size: 40px;
-  /* height: 40px; */
   padding: 20px 0px;
   text-align: center;
   text-shadow: 2px 2px black;
@@ -38,7 +41,7 @@ main > section:first-child > h2 { /* ingredients header */
   grid-template-columns: repeat(4, 150px);
   grid-template-rows: auto;
   grid-gap: 2px;
-  margin: 5px auto 5px auto;
+  margin: 5px auto;
   width: 606px;
   justify-content: center;
 }
@@ -77,7 +80,6 @@ main > section:last-child { /* recipe container*/
 }
 
 main > section:last-child > h2 { /* recipe header */
-  background-color: #5a46a1;
   background-image: url('../imgs/background/porkchophead.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -93,9 +95,9 @@ main > section:last-child > h2 { /* recipe header */
 }
 
 #recipes { /* container */
-  background-color: lightblue;
+  background-color: grey;
   margin: 0px auto 0px auto;
-  padding: 5px 0px;
+  padding: 2px 0px;
   width: 620px;
 }
 
@@ -104,7 +106,7 @@ main > section:last-child > h2 { /* recipe header */
   background-color: white;
   height: 100px;
   padding: 5px 0px;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 /* img wrap width 105px */
