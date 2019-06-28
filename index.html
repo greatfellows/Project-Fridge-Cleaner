@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>What's in your Fridge?</title>
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie|Cuprum|EB+Garamond|Fredericka+the+Great|Indie+Flower|Satisfy&display=swap">
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/index.css" />
-</head>
+  <head>
+    <title>What's in your Fridge?</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie|Cuprum|EB+Garamond|Fredericka+the+Great|Indie+Flower|Satisfy&display=swap">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
 
+  <body>
 
-<body>
-  <header>
-
-    <div id="loginDiv">
-      <h4></h4>
-      <input type="button" value="Sign In" id="loginbutton" onclick="loginbutton" />
-    </div>
-
-    <div id="formInvis">
-      <form id="form_id" method="post" name="username">
-        <label>User Name :</label>
-        <input type="text" name="username" id="username" />
-        <label>Password :</label>
-        <input type="password" name="password" id="password" />
-        <input type="button" value="Login" id="submit" onclick="" />
-      </form>
-    </div>
-
-    <div>
-      <img id='logo' src="imgs/logo.png" />
-      <div>
-        <h1>Lazy Chef</h1>
-        <h4>Whip something up</h4>
+    <header>
+      <div id="loginDiv">
+        <h4></h4>
+        <input type="button" value="Sign In" id="loginbutton" onclick="loginbutton" />
       </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="user-page.html">MyFridge</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <main>
+      <div id="formInvis">
+        <form id="form_id" method="post" name="username">
+          <label>User Name :</label>
+          <input type="text" name="username" id="username" />
+          <label>Password :</label>
+          <input type="password" name="password" id="password" />
+          <input type="button" value="Login" id="submit" onclick="" />
+        </form>
+      </div>
 
-    <section>
-      <h2>Ingredients</h2>
-      <div id="ingredients"></div>
-    </section>
+      <div>
+        <img id='logo' src="imgs/logo.png" />
+        <div>
+          <h1>Lazy Chef</h1>
+          <h4>Whip something up</h4>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="user-page.html">MyFridge</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <section>
-      <h2>Recipes</h2>
-      <div id="recipes"></div>
-    </section>
-  </main>
+    <main>
 
-  <footer>
-    <h5>&COPY;Fridge Cleaners 2019</h5>
-  </footer>
+      <section>
+        <h2>Ingredients</h2>
+        <div id="ingredients"></div>
+      </section>
 
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
-  <script src='js/login.js'></script>
+      <section>
+        <h2>Recipes</h2>
+        <div id="recipes"></div>
+      </section>
 
-</body>
+    </main>
 
+    <footer>
+      <h5>&COPY;Lazy Chef 2019</h5>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src='js/login.js'></script>
+
+  </body>
 
 </html>

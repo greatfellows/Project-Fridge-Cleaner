@@ -126,14 +126,7 @@ nav li{
 }
 
 main {
-  margin:auto;
-}
-
-main > section {
-  margin: 20px auto;
-  /* width: 1024px; */
-  height: 530px;
-  overflow: auto;
+  margin: auto;
 }
 
 a {
@@ -148,5 +141,7 @@ a:visited {
 
 footer {
   color: white;
+  margin: 10px auto 0px auto;
+  width: 1280px;
 }
 
