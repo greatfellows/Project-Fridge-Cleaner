@@ -1,5 +1,8 @@
 
- 
+ section{
+     overflow: hidden;
+     width: 1000px;
+ }
 
 section > div > img{
     height: 300px;
@@ -17,8 +20,8 @@ p {
 
 #icon{
     border-radius: 200px;
-    width: auto;
-    height: 320px;
+    width: 300px;
+    height: 300px;
     /* display: inline-block; */
 
 }
@@ -30,24 +33,9 @@ body > main > section > #Hanna{
     /* table-layout: auto; */
     float: right;
 }
-/* #iconDeck{
-    table-layout: fixed;
-}
-
-
-#Benjamin{    
-}
-#Hanna{
-    float: left;
-}
-#Elle{
-}
-#Eric{
-    float: left;
-} */
-
 #description{
-    padding: 5px;  
+    padding-top: 5px;  
+    padding-bottom: 10px;  
     font-size: 30px;
     background-color: rgba(0, 0, 0, 0.651);
     color: white;
@@ -55,16 +43,15 @@ body > main > section > #Hanna{
     margin: auto;
 }
 
+::-webkit-scrollbar{
+    width: 0px;
+
+}
 
 /* entire container, keeps perspective */
 
 .flip-container {
-    /* display: grid   ; */
-    perspective: 1000px;
-    /* margin: auto; */
-    /* display: flex;  
-    flex-wrap: wrap; */
-    
+    perspective: 1000px;    
 }
 	/* flip the pane when hovered */
 	.flip-container:hover .flipper, .flip-container.hover .flipper {
@@ -72,14 +59,11 @@ body > main > section > #Hanna{
 	}
 
 .flip-container, .front, .back {
-	width: 600px;
-    height: 200px;
+	width: 500px;
+    height: 300px;
     margin-bottom: 200px;
     padding-left: 60px;
-
-
-
-    
+    background-color: blueviolet
 }
 
 /* flip speed goes here */
@@ -95,14 +79,16 @@ body > main > section > #Hanna{
 	position: absolute;
 	top: 0;
     left: 0;
-
+    margin-left: 10px;
+    
 }
 
 /* front pane, placed above back */
 .front {
-	z-index: 2;
+	z-index: 0;
 	/* for firefox 31 */
     transform: rotateY(0deg);
+    
 
 }
 
@@ -111,8 +97,8 @@ body > main > section > #Hanna{
     transform: rotateY(180deg);
     background-color: rgba(0, 0, 0, 0.651);
     color: white;
-  
-
+    text-align: center;
+    /* border-radius: 300px; */
 }
 
 
