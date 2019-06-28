@@ -1,4 +1,5 @@
-/* font-family: 'Cuprum', sans-serif;
+/* 
+font-family: 'Cuprum', sans-serif;
 font-family: 'Satisfy', cursive;
 font-family: 'Indie Flower', cursive;
 font-family: 'EB Garamond', serif;
@@ -69,16 +70,18 @@ header {
 }
 
 #formVis{
-  /* DO NOT CHANGE THE SIZES HERE */
-  background-color: rgb(122, 121, 119);
+  border: 1px solid white;
+  background-color: rgb(58, 55, 71);
+  color: white;
   padding: 20px;
   left: 0;
   right: 0;
   position: absolute;
   margin: 10px auto;
   width: 550px;
-  height: 80PX;
+  height: 20px;
   z-index: 1; 
+  opacity: 1;
 }
 
 header > div:last-child {
@@ -126,14 +129,7 @@ nav li{
 }
 
 main {
-  margin:auto;
-}
-
-main > section {
-  margin: 20px auto;
-  /* width: 1024px; */
-  height: 530px;
-  overflow: auto;
+  margin: auto;
 }
 
 a {
@@ -148,5 +144,7 @@ a:visited {
 
 footer {
   color: white;
+  margin: 10px auto 0px auto;
+  width: 1280px;
 }
 

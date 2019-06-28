@@ -1,119 +1,91 @@
-
- 
-
-section > div > img{
-    height: 300px;
-    width: auto;
-    
-
-}
-h1 { 
-    font-size: 40px;
-}
-p {
-    
-    font-size: 20px;
+main {
+  margin: 20px 0px;
+  height: 500px;
 }
 
-#icon{
-    border-radius: 200px;
-    width: auto;
-    height: 320px;
-    /* display: inline-block; */
-
-}
-body > main > section > #Benjamin{
-    /* table-layout: auto; */
-    float: right;
-}
-body > main > section > #Hanna{
-    /* table-layout: auto; */
-    float: right;
-}
-/* #iconDeck{
-    table-layout: fixed;
+#description {
+  background-color: black;
+  color: white;
+  width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  opacity: .8;
 }
 
-
-#Benjamin{    
-}
-#Hanna{
-    float: left;
-}
-#Elle{
-}
-#Eric{
-    float: left;
-} */
-
-#description{
-    padding: 5px;  
-    font-size: 30px;
-    background-color: rgba(0, 0, 0, 0.651);
-    color: white;
-    width: 960px;
-    margin: auto;
+#description > h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
+#iconDeck {
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px;
+  grid-gap: 40px;
+  justify-content: center;
+  /* padding-top: 40px; */
+}
 
-/* entire container, keeps perspective */
+#iconDeck > div {
+  width: 250px;
+}
+
+.icon {
+  border: 5px solid white;
+  border-radius: 125px;
+  object-fit: contain;
+  height: 250px;
+  width: 250px;
+}
+
+.front {
+  margin: auto;
+  width: 250px;
+  transform: rotate(0deg);
+  z-index: 1;
+}
+
+.back {
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 250px;
+  margin: auto;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 250px;
+  opacity: 0.8;
+}
+
+.back h1 {
+  font-size: 20px;
+  margin: 10px 0px;
+}
+
+.back p {
+  font-size: 18px;
+  width: 230px;
+  padding: 0px 10px;
+}
 
 .flip-container {
-    /* display: grid   ; */
-    perspective: 1000px;
-    /* margin: auto; */
-    /* display: flex;  
-    flex-wrap: wrap; */
-    
-}
-	/* flip the pane when hovered */
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
-		transform: rotateY(180deg);
-	}
-
-.flip-container, .front, .back {
-	width: 600px;
-    height: 200px;
-    margin-bottom: 200px;
-    padding-left: 60px;
-
-
-
-    
+  height:250px;
+  perspective: 250px;
 }
 
-/* flip speed goes here */
+.flip-container:hover .flipper, .flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
 .flipper {
-	transition: 1s;
-	transform-style: preserve-3d;
-	position: relative;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
 }
 
-/* hide back of pane during swap */
 .front, .back {
-	backface-visibility: hidden;
-	position: absolute;
-	top: 0;
-    left: 0;
-
+  backface-visibility: hidden;
 }
-
-/* front pane, placed above back */
-.front {
-	z-index: 2;
-	/* for firefox 31 */
-    transform: rotateY(0deg);
-
-}
-
-/* back, initially hidden pane */
-.back {
-    transform: rotateY(180deg);
-    background-color: rgba(0, 0, 0, 0.651);
-    color: white;
-  
-
-}
-
-
-   
