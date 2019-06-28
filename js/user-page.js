@@ -3,7 +3,7 @@
 var userName = allUsersData[currentUserName].userName;
 var welcome = document.getElementById('welcome');
 
-welcome.textContent = 'Welcome back, ' + userName;
+welcome.textContent = 'Welcome back, ' + userName + '.';
 
 //render users selected ingredients
 var favIngredientsDiv = document.getElementById('userIngredients');
@@ -26,14 +26,12 @@ var renderFavRecipes = function () {
   for (var i = 0; i < recipeBook.length; i++) {
     if (allUsersData[currentUserName].userRecipes.includes(recipeBook[i].name)) {
 
-
       var favRecDiv = document.createElement('div');
       var imageElement = document.createElement('img');
       var title = document.createElement('h3');
       var ulElement = document.createElement('ul');
 
       for (var j = 0; j < recipeBook[i].ingredients.length; j++) {
-
         var liElement = document.createElement('li');
         liElement.textContent = recipeBook[i].ingredients[j];
         ulElement.appendChild(liElement);
@@ -48,5 +46,16 @@ var renderFavRecipes = function () {
   }
 };
 
+function displayUserWelcome(){
+  var hello = document.getElementById('hello');
+  hello.addEventListener('load', unHide(event));
+}
+
+function unHide(event){
+  var hello = document.getElementById('hello');
+  hello.className = 'unhidden';
+}
+
 renderFavRecipes();
 renderUserIngredients();
+displayUserWelcome();
