@@ -70,16 +70,18 @@ header {
 }
 
 #formVis{
-  /* DO NOT CHANGE THE SIZES HERE */
-  background-color: rgb(122, 121, 119);
+  border: 1px solid white;
+  background-color: rgb(58, 55, 71);
+  color: white;
   padding: 20px;
   left: 0;
   right: 0;
   position: absolute;
   margin: 10px auto;
   width: 550px;
-  height: 80PX;
+  height: 20px;
   z-index: 1; 
+  opacity: 1;
 }
 
 header > div:last-child {

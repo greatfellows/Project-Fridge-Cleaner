@@ -3,7 +3,7 @@
 var userName = allUsersData[currentUserName].userName;
 var welcome = document.getElementById('welcome');
 
-welcome.textContent = 'Welcome back, ' + userName;
+welcome.textContent = 'Welcome back, ' + userName + '.';
 
 //render users selected ingredients
 var favIngredientsDiv = document.getElementById('userIngredients');

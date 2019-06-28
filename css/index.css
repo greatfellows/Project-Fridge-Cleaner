@@ -41,7 +41,7 @@ main > section:first-child > h2 { /* ingredients header */
   grid-template-columns: repeat(4, 150px);
   grid-template-rows: auto;
   grid-gap: 2px;
-  margin: 5px auto 5px auto;
+  margin: 5px auto;
   width: 606px;
   justify-content: center;
 }
