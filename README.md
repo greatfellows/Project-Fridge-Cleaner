@@ -1,6 +1,7 @@
-Read me
-Great Fellows - What can I make? 
+What can I make? 
 	*A project to tell you what to make for dinner based off of what you have in your own fridge!
+	
+[See deployed project here](https://greatfellows.github.io/Project-Fridge-Cleaner/index.html)
 
 Created by Eric Huang, Benjamin Clark, Hanna Alemu, & Elle Young
 ================================================================
