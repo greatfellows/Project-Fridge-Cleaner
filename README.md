@@ -2,7 +2,7 @@ Read me
 Great Fellows - What can I make? 
 	*A project to tell you what to make for dinner based off of what you have in your own fridge!
 
-Created by Eric Huang, Benjamin Clard, Hanna Alemu, & Elle Young
+Created by Eric Huang, Benjamin Clark, Hanna Alemu, & Elle Young
 ================================================================
 **Update for Monday 06.24.19:
 
